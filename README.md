@@ -1,4 +1,5 @@
-# <Título del proyecto> - <Año>
+﻿# <Título del proyecto> - 2019
+Best BattleBot!!
 <Breve descripción del proyecto. Todo lo que esté entre llaves debe ser editado por ustedes>
 <Insertar una imagen del proyecto terminado, de vista general, como el que aparece abajo>
 
@@ -7,13 +8,15 @@
 
 
 ## Integrantes
-- <Integrante 1> - <Facultad>
-- <Integrante 2> - <Facultad>
-- <Integrante 3> - <Facultad>
-- <Integrante 4> - <Facultad>
+- Leslie Cárdenas - FCFM
+- Tomás Ceballos - FCFM
+- Francisca Guiñez - FCFM
+- Keyla Sandoval - FCFM
 
 
 ## Descripción del proyecto
+
+Estamos trabajando para ustedes... Aún
 
 ### Estrategia utilizada
 #### Ofensiva
