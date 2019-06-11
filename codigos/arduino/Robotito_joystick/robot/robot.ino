@@ -1,21 +1,16 @@
-#include <VirtualWire.h>
-#include <VirtualWire_Config.h>
-
-
-int estado_arma = Estado::VEL_FIJA;
+#include <RH_ASK.h>
+#include <SPI.h>
 
 int state;
-int motorA_vel = 0;
-int motorB_vel = 0;
+int motorSpeedB = 0;
+int motorSpeedA = 0;
 int vel_actual = 0;
 int vel_nueva = 0;
 int vel_salto = 2;
 
-struct Message{
-  uint8_t axisX;
-  uint8_t axisY;
-  uint8_t motorSpeedA;
-  uint8_t motorSpeedB;
+struct Message {
+  int16_t motorSpeedA;
+  int16_t motorSpeedB;
 } message;
 
 // motor A, izquierdo
@@ -29,34 +24,45 @@ struct Message{
 #define PIN_MOT_BEN 10  //ENB
 
 //motor arma
-#define PIN_ARMA_PWMR 11
+#define PIN_ARMA_PWMR 12
 #define PIN_ARMA_PWML 3
-#define PIN_ARMA_ENR 12
+#define PIN_ARMA_ENR 6
 #define PIN_ARMA_ENL 13
 
-void setup(){
-  
-  configurarBluetooth();
+RH_ASK driver;
+
+
+// Primero creamos un buffer de un tamaño suficiente para que caiga el mensaje (16 bits)
+uint8_t rcvBuffer[32];
+// Creamos una estructura mensaje para guardar el mensaje recibido
+Message rcvMessage;
+// Guardamos el tamaño esperado del mensaje
+uint8_t rcvBufferSize = sizeof(rcvMessage);
+
+
+void setup() {
+
   configurarMotoresMovimiento();
   configurarArma();
-  
-  Serial.begin(9600);
-  SerialBT.begin(9600);
+
+  Serial.begin(9600);  // Debugging only
+  if (!driver.init()) {
+    Serial.println("init failed");
+  }
 }
 
 void loop() {
-  // Chequear Serial
-  leerSerial();
-  
+  // Recibir mensajes
+  leerRF();
+
   //Para detener todo
   detenertodo();
-  
+
   // Mover el robot
   moverRobot();
-  
+
   // Mover el arma
   setVelArma();
-  Serial.println(vel_actual);
 }
 
 void setVelArma() {
@@ -76,7 +82,7 @@ void setVelArma() {
     vel_nueva = 200;
   }
   check_vel();
-  
+
 }
 void check_vel() {
   if (vel_actual > vel_nueva) {
@@ -88,115 +94,52 @@ void check_vel() {
 }
 
 void disminuir_vel() {
-    vel_actual -= vel_salto;
-    analogWrite(PIN_ARMA_PWML, vel_actual);
-    delay(25);
+  vel_actual -= vel_salto;
+  analogWrite(PIN_ARMA_PWML, vel_actual);
+  delay(25);
 }
 
 void aumentar_vel() {
-    vel_actual += vel_salto;
-    analogWrite(PIN_ARMA_PWML, vel_actual);
-    delay(25);
+  vel_actual += vel_salto;
+  analogWrite(PIN_ARMA_PWML, vel_actual);
+  delay(25);
+}
+
+void leerRF() {
+  if (driver.recv((rcvBuffer), &rcvBufferSize)) // tratamos de leer desde el RF cualquier mensaje. Leemos (rcvBufferSize) bytes y los guardamos en rcvBuffer
+  {
+    Serial.println("Recibimos un mensaje");
+    // Por último copiamos el buffer rcvBuffer en la estructura rcvMessage (indicando la cantidad de bytes que tenemos que copiar -rcvBufferSize-),
+    // para poder acceder a los elementos axisX y axisY
+    memcpy( &rcvMessage, rcvBuffer, rcvBufferSize );
+  }
 }
 
 void moverRobot() {
-  //direcciones
-
-  int xAxis = analogRead(A0); // Read Joysticks X-axis
-  int yAxis = analogRead(A1); // Read Joysticks Y-axis
-  
-  if (yAxis < 470) {
-    //Set Motor A backward
-    digitalWrite(PIN_MOT_A1, HIGH);
-    digitalWrite(PIN_MOT_A2, LOW);
-    // Set Motor B backward
-    digitalWrite(PIN_MOT_B1, HIGH);
-    digitalWrite(PIN_MOT_B2, LOW);
-    // Convert the declining Y-axis readings for going backward from 470 to 0 into 0 to 255 value for the PWM signal for increasing the motor speed
-    motorSpeedA = map(yAxis, 470, 0, 0, 255);
-    motorSpeedB = map(yAxis, 470, 0, 0, 255);
-  }
-  else if (yAxis > 550) {
-    digitalWrite(PIN_MOT_A1, LOW);
-    digitalWrite(PIN_MOT_A2, HIGH);
-    digitalWrite(PIN_MOT_B1, LOW);
-    digitalWrite(PIN_MOT_B2, HIGH);
-    motorSpeedA = map(yAxis, 550, 1023, 0, 255);
-    motorSpeedB = map(yAxis, 550, 1023, 0, 255);
-   }
-  else {
-    motorSpeedA = 0;
-    motorSpeedB = 0;
-    }
-   // X-axis used for left and right control
-
-
-   
-  if (xAxis < 470) {
-    int xMapped = map(xAxis, 470, 0, 0, 255);
-    motorSpeedA = motorSpeedA - xMapped;
-    motorSpeedB = motorSpeedB + xMapped;
-    
-    // Confine the range from 0 to 255
-    if (motorSpeedA < 0) {
-      motorSpeedA = 0;
-      }
-    if (motorSpeedB > 255) {
-      motorSpeedB = 255;
-      }
-    
-    }
-  if (xAxis > 550) {
-    // Convert the increasing X-axis readings from 550 to 1023 into 0 to 255 value
-    int xMapped = map(xAxis, 550, 1023, 0, 255);
-    // Move right - decrease right motor speed, increase left motor speed
-    motorSpeedA = motorSpeedA + xMapped;
-    motorSpeedB = motorSpeedB - xMapped;
-    // Confine the range from 0 to 255
-    if (motorSpeedA > 255) {
-      motorSpeedA = 255;
-      }
-    if (motorSpeedB < 0) {
-      motorSpeedB = 0;
-      }
-    }
-  if (motorSpeedA < 50) {
-    motorSpeedA = 0;
-    }
-  if (motorSpeedB < 50) {
-    motorSpeedB = 0;
-    }
-  analogWrite(enA, motorSpeedA); // Send PWM signal to motor A
-  analogWrite(enB, motorSpeedB); // Send PWM signal to motor B
-
-
-
-
-  
-  if (state == 'E'){
-    rotarRobot_derecha();
-  }
-  else if (state == 'Q') {
-    rotarRobot_izquierda();
-  }
-  else if (state == 'S') {
+  if (rcvMessage.motorSpeedA < 0) {
     moverRobot_atras();
-  }  
-  else if (state == 'W') {
+    motorSpeedA = -1 * rcvMessage.motorSpeedA;
+    motorSpeedB = -1 * rcvMessage.motorSpeedB;
+  }
+  else if (rcvMessage.motorSpeedA > 0) {
     moverRobot_adelante();
   }
-  else if (state == 'A') {
-    moverRobot_izquierda();
-  }
-  else if (state == 'D') {
-    moverRobot_derecha();
-  }
-  else if (state == 'P') {
+  else {
     pararRobot();
   }
+
+  analogWrite(PIN_MOT_AEN, motorSpeedA); // Send PWM signal to motor A
+  analogWrite(PIN_MOT_BEN, motorSpeedB); // Send PWM signal to motor B
+
+  Serial.print("Message: ");
+  Serial.print("MotorSpeedA: ");
+  Serial.print(rcvMessage.motorSpeedA);
+  Serial.print(", MotorSpeedB: ");
+  Serial.print(rcvMessage.motorSpeedB);
+  Serial.println(" ");
 }
 
-void detenertodo() { 
+void detenertodo() {
   if (state == 'M') {
     pararRobot();
     digitalWrite(PIN_MOT_AEN, LOW);
@@ -206,106 +149,30 @@ void detenertodo() {
   }
 }
 
-void leerSerial() {
-  SerialBT.listen();
-  if (SerialBT.available() > 0) {
-    state = SerialBT.read();
-  }
-}
-
-void moverRobot_derecha() {
-    // mover a la derecha
-
-    motorA_vel = 255;
-    motorB_vel = 150;
-    analogWrite(PIN_MOT_AEN,motorA_vel);
-    analogWrite(PIN_MOT_BEN,motorB_vel);
-    
-    digitalWrite(PIN_MOT_A1, LOW);
-    digitalWrite(PIN_MOT_A2, HIGH);
-    digitalWrite(PIN_MOT_B1, HIGH);
-    digitalWrite(PIN_MOT_B2, LOW);
-}
-void moverRobot_izquierda() {
-    // mover a la izquierda
-
-    //modificar velocidad
-    motorA_vel = 150;
-    motorB_vel = 255;
-    analogWrite(PIN_MOT_AEN,motorA_vel);
-    analogWrite(PIN_MOT_BEN,motorB_vel);
-    
-    //direccion
-    digitalWrite(PIN_MOT_A1, LOW);
-    digitalWrite(PIN_MOT_A2, HIGH);
-    digitalWrite(PIN_MOT_B1, HIGH);
-    digitalWrite(PIN_MOT_B2, LOW);
-}
 void moverRobot_atras() {
-    // mover hacia atras
-    motorA_vel = 255;
-    motorB_vel = 255;
-    analogWrite(PIN_MOT_AEN,motorA_vel);
-    analogWrite(PIN_MOT_BEN,motorB_vel);
-    
-    digitalWrite(PIN_MOT_A1, HIGH);
-    digitalWrite(PIN_MOT_A2, LOW);
-    
-    digitalWrite(PIN_MOT_B1, LOW);
-    digitalWrite(PIN_MOT_B2, HIGH);
+  // mover hacia atras
+  digitalWrite(PIN_MOT_A1, HIGH);
+  digitalWrite(PIN_MOT_A2, LOW);
+  digitalWrite(PIN_MOT_B1, LOW);
+  digitalWrite(PIN_MOT_B2, HIGH);
 }
+
 void moverRobot_adelante() {
-    // mover hacia adelante
-    motorA_vel = 255;
-    motorB_vel = 255;
-    analogWrite(PIN_MOT_AEN,motorA_vel);
-    analogWrite(PIN_MOT_BEN,motorB_vel);
-    
-    digitalWrite(PIN_MOT_A1, LOW);
-    digitalWrite(PIN_MOT_A2, HIGH);
-    digitalWrite(PIN_MOT_B1, HIGH);
-    digitalWrite(PIN_MOT_B2, LOW);
-}
-
-void rotarRobot_derecha() {
-    // rotar a la derecha
-    motorA_vel = 200;
-    motorB_vel = 200;
-    analogWrite(PIN_MOT_AEN,motorA_vel);
-    analogWrite(PIN_MOT_BEN,motorB_vel);
-    
-    digitalWrite(PIN_MOT_A1, LOW);
-    digitalWrite(PIN_MOT_A2, HIGH);
-    digitalWrite(PIN_MOT_B1, LOW);
-    digitalWrite(PIN_MOT_B2, HIGH);
-}
-
-void rotarRobot_izquierda() {
-    // rotar a la izquierda
-    motorA_vel = 200;
-    motorB_vel = 200;
-    analogWrite(PIN_MOT_AEN,motorA_vel);
-    analogWrite(PIN_MOT_BEN,motorB_vel);
-    
-    digitalWrite(PIN_MOT_A1, HIGH);
-    digitalWrite(PIN_MOT_A2, LOW);
-    digitalWrite(PIN_MOT_B1, HIGH);
-    digitalWrite(PIN_MOT_B2, LOW);
+  // mover hacia adelante
+  digitalWrite(PIN_MOT_A1, LOW);
+  digitalWrite(PIN_MOT_A2, HIGH);
+  digitalWrite(PIN_MOT_B1, HIGH);
+  digitalWrite(PIN_MOT_B2, LOW);
 }
 
 void pararRobot() {
   //detener motores
-    digitalWrite(PIN_MOT_A1, LOW);
-    digitalWrite(PIN_MOT_A2, LOW);
-    digitalWrite(PIN_MOT_B1, LOW);
-    digitalWrite(PIN_MOT_B2, LOW);
+  digitalWrite(PIN_MOT_A1, LOW);
+  digitalWrite(PIN_MOT_A2, LOW);
+  digitalWrite(PIN_MOT_B1, LOW);
+  digitalWrite(PIN_MOT_B2, LOW);
 }
 
-void configurarBluetooth() {
-  //Pines Bluetooth
-  pinMode(PIN_BT_TX, INPUT);
-  pinMode(PIN_BT_RX, INPUT);
-}
 
 void configurarMotoresMovimiento() {
   //Pines Motor A
@@ -313,7 +180,7 @@ void configurarMotoresMovimiento() {
   pinMode(PIN_MOT_A2, OUTPUT);
   pinMode(PIN_MOT_AEN, OUTPUT);
   digitalWrite(PIN_MOT_AEN, HIGH);
-  
+
   //Pines Motor B
   pinMode(PIN_MOT_B1, OUTPUT);
   pinMode(PIN_MOT_B2, OUTPUT);
@@ -328,8 +195,8 @@ void configurarArma() {
   pinMode(PIN_ARMA_ENR, OUTPUT);
   pinMode(PIN_ARMA_ENL, OUTPUT);
 
-  digitalWrite(PIN_ARMA_PWMR,LOW);
-  digitalWrite(PIN_ARMA_PWML,LOW);
-  digitalWrite(PIN_ARMA_ENR,HIGH);
-  digitalWrite(PIN_ARMA_ENL,HIGH);
+  digitalWrite(PIN_ARMA_PWMR, LOW);
+  digitalWrite(PIN_ARMA_PWML, LOW);
+  digitalWrite(PIN_ARMA_ENR, HIGH);
+  digitalWrite(PIN_ARMA_ENL, HIGH);
 }
