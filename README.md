@@ -1,7 +1,6 @@
 
 # Robotito
-
-Robotito es un proyecto hecho con amor
+Robotito es un battlebot de un taller  universitario que combina conocimientos de electrica , mecánica y programación;bajo un acorazado de metal giratorio.
 
 <Insertar una imagen del proyecto terminado, de vista general, como el que aparece abajo>
 
@@ -18,7 +17,7 @@ Robotito es un proyecto hecho con amor
 
 ## Descripción del proyecto
 
-Cabres arreglen esto pls
+Un robot controlado a traves de una aplicación celular conectado vía bluetooth
 
 ### Estrategia utilizada
 #### Ofensiva
