@@ -1,6 +1,8 @@
-﻿# <Título del proyecto> - 2019
-Best BattleBot!!
-<Breve descripción del proyecto. Todo lo que esté entre llaves debe ser editado por ustedes>
+
+# Robotito
+
+Robotito es un proyecto hecho con amor
+
 <Insertar una imagen del proyecto terminado, de vista general, como el que aparece abajo>
 
 ![Robot Ejemplo](/multimedia/robot_ejemplo.png)
@@ -33,7 +35,7 @@ Estamos trabajando para ustedes... Aún
 
 ### Sobre la app
 
-![Tabla Explicativa](/multimedia/tabla_botones.png) 
+![Tabla Explicativa](/multimedia/tabla_botones.png)
 
 ## Licencia
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Licencia Creative Commons Atribución-NoComercial 4.0 Internacional</a>.
