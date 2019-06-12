@@ -18,7 +18,7 @@ Robotito es un proyecto hecho con amor
 
 ## Descripción del proyecto
 
-Estamos trabajando para ustedes... Aún
+Cabres arreglen esto pls
 
 ### Estrategia utilizada
 #### Ofensiva
