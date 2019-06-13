@@ -27,18 +27,18 @@ SoftwareSerial SerialBT(5,6);
 // motor A, izquierdo
 #define PIN_MOT_A1 2    //IN1
 #define PIN_MOT_A2 4    //IN2
-#define PIN_MOT_AEN 9   //ENA
+#define PIN_MOT_AEN 3   //ENA
 
 //motor B, derecho
-#define PIN_MOT_B1 7    //IN3
-#define PIN_MOT_B2 8    //IN4
-#define PIN_MOT_BEN 10  //ENB
+#define PIN_MOT_B1 13    //IN3
+#define PIN_MOT_B2 12    //IN4
+#define PIN_MOT_BEN 11  //ENB
 
 //motor arma
-#define PIN_ARMA_PWMR 11
-#define PIN_ARMA_PWML 3
-#define PIN_ARMA_ENR 12
-#define PIN_ARMA_ENL 13
+#define PIN_ARMA_PWMR 10
+#define PIN_ARMA_PWML 9
+#define PIN_ARMA_ENR 7
+#define PIN_ARMA_ENL 8
 
 void setup(){
   
