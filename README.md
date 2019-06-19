@@ -4,7 +4,7 @@ Robotito es un battlebot de un taller  universitario que combina conocimientos d
 
 <Insertar una imagen del proyecto terminado, de vista general, como el que aparece abajo>
 
-![Modelo inicial](/multimedia/robot_ejemplo.png)
+![Modelo inicial](/multimedia/robotito2.jpeg)
 
 
 
@@ -17,7 +17,7 @@ Robotito es un battlebot de un taller  universitario que combina conocimientos d
 
 ## Descripción del proyecto
 
-Un robot controlado a traves de una aplicación celular (App-Inventor) conectado vía bluetooth para mandar instrucciones al arduino hc06 quien controla los moteres del sistema de avance y giratorio del acorazado.
+Un robot controlado a traves de una aplicación celular (App-Inventor) conectado vía bluetooth para mandar instrucciones al arduino hc06 quien controla los motores del sistema de avance y giratorio del acorazado.
 
 El funcionamiento general se basa en dos motores reductores  encargados de las ruedas del battlebot y un motor DC de 2500 rpm conectado al casco atravez de una pieza impresa en 3D que se mostrará en el extenso del documento.Cabe destacar que cada motor tiene su propio puente H ;todo alimentado por dos baterias lipo.
 
