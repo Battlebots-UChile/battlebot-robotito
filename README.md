@@ -2,10 +2,9 @@
 # Robotito
 Robotito es un battlebot de un taller  universitario que combina conocimientos de electrica , mecánica y programación,bajo un acorazado de metal giratorio.
 
-<Insertar una imagen del proyecto terminado, de vista general, como el que aparece abajo>
+![ Piso inferior](/multimedia/robotito2.jpeg)
 
-![Modelo inicial](/multimedia/robotito2.jpeg)
-
+![Exterior](/multimedia/robotito1.jpeg)
 
 
 ## Integrantes
@@ -35,8 +34,11 @@ El casco era nuestra defensa, la cual resulto ser muy efectiva , ya que en la ba
 ### Diagrama funcional
 <Diagrama general de funcionamiento. Se sugiere un esquema de sistemas, completo.>
 
-### *BONUS*: Paso a Paso
-<Explicar brevemente el paso a paso de cómo construir el battlebot.>
+###  Paso a Paso
+Comenzamos por el tren de movimiento, usando yellow motores para mover las ruedas
+![ ](/multimedia/rueda.jpeg)
+Luego con ello 
+
 
 ### Sobre la app
 
