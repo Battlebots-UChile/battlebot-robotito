@@ -1,6 +1,6 @@
-
+﻿
 # Robotito
-Robotito es un battlebot de un taller  universitario que combina conocimientos de electrica , mecánica y programación,bajo un acorazado de metal giratorio.
+Robotito es un battlebot realizado en el taller de proyecto "Contruye tu battlebot", el cuál combina conocimientos de electrónica, mecánica y programación, bajo un acorazado de metal giratorio.
 
 ![ Piso inferior](/multimedia/robotito2.jpeg)
 
@@ -16,20 +16,23 @@ Robotito es un battlebot de un taller  universitario que combina conocimientos d
 
 ## Descripción del proyecto
 
-Un robot controlado a traves de una aplicación celular (App-Inventor) conectado vía bluetooth para mandar instrucciones al arduino hc06 quien controla los motores del sistema de avance y giratorio del acorazado.
+Robotito es un robot, pero no cualquier tipo de robot, NOOO... es un BATTLEBOT (por si no quedo claro en los títulos), controlado mediante una aplicación celular (App-Inventor), cuyo objetivo en la vida es detener todos los golpes que intenten destruirlo.
 
-El funcionamiento general se basa en dos motores reductores  encargados de las ruedas del battlebot y un motor DC de 2500 rpm conectado al casco atravez de una pieza impresa en 3D que se mostrará en el extenso del documento.Cabe destacar que cada motor tiene su propio puente H ;todo alimentado por dos baterias lipo.
+Funciona en base a dos motores DC básicos, uno conectado a cada rueda, y un motor DC de 2500 rpm, conectado a un bowl de cocina, a través de una pieza impresa en 3D. Cuenta con dos puentes H, uno dual y uno single, y es alimentado por dos baterias LiPo.
 
 ### Estrategia utilizada
-Elegimos este diseño como un modo de unir defensa y ataque; según nuestra hipótesis la velocidad del objeto iba a ser tanta que cualquier intento por detenerlo o atacarlo directamente iba a resultar en el battlebot empujado o incluso podría quemar el sistema de ataque  dada a la alta cantidad de amperaje necesario para detner el giro de la caracasa.
 
-A su vez elegimos una caracasa de acero (que anteriormente era un bool) lo que bloqueo todos los intentos de corte o golpes.
+Elegimos este diseño como un modo de unir defensa y ataque. Según nuestra hipótesis la velocidad del objeto iba a ser tanta que cualquier intento por detenerlo o atacarlo directamente iba a resultar en el battlebot enemigo siendo empujado, o en el mejor de los casos podría detener su sistema de ataque, dada a la alta cantidad de potencia necesaria para detener el giro del bowl.
+
+A su vez elegimos una carcasa de acero (que anteriormente era un bowl) lo que bloqueo todos los intentos de corte o golpes.
+
 #### Ofensiva
-Como dijimos anteriormente nuestro modelo en sí mismo era una arma, pero aún así pensamos integrar un complemento a la carcasa en la zona mas baja de la misma, dicha estructura hecha de placa MDF consta de un anillo con tres protuberancias que dada a su ubicacion pasarían por debajo de los distintos robots levantandolo usando solo la velocidad y fuerza del motor conectado al casco.
+Como dijimos anteriormente nuestro modelo en sí mismo es una arma, pero aún así pensamos integrar un complemento a la carcasa en la zona mas baja de la misma, dicha estructura hecha de placa MDF consta de un anillo con tres protuberancias que dada a su ubicacion pasarían por debajo de los distintos robots levantandolo usando solo la velocidad y fuerza del motor conectado al casco.
 
 #### Defensiva
-El casco era nuestra defensa, la cual resulto ser muy efectiva , ya que en la batalla solo lograron raspar la superficie, e inclusive ni siquiera fuimos empujados.
-
+El bowl es nuestra principal y evidente, pero no única, defensa. Es de acero inoxidable. Proviene directamente de la cocina de una de las integrantes de nuestro grupo :).
+Pero como un pedazo de metal no puede con todo (¿o si?), para detener los posibles ataques a ras de suelo (ya que el bowl deja un par de centímetros al descubierto), nuestro battlebot cuenta con lo que denominamos una "falda", cortada con laser en MDF de 6mm.
+Adeamas, cabe decir que la forma circular o media esférica conseguida también ayuda a que los golpes no lleguen de forma directa.
 
 ### Diagrama funcional
 <Diagrama general de funcionamiento. Se sugiere un esquema de sistemas, completo.>
