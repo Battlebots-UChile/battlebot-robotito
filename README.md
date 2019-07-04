@@ -20,6 +20,8 @@ Robotito es un robot, pero no cualquier tipo de robot, NOOO... es un BATTLEBOT (
 
 Funciona en base a dos motores DC básicos, uno conectado a cada rueda, y un motor DC de 2500 rpm, conectado a un bowl de cocina, a través de una pieza impresa en 3D. Cuenta con dos puentes H, uno dual y uno single, y es alimentado por dos baterias LiPo.
 
+### [Daños tipo]()
+
 ### Estrategia utilizada
 
 Elegimos este diseño como un modo de unir defensa y ataque. Según nuestra hipótesis la velocidad del objeto iba a ser tanta que cualquier intento por detenerlo o atacarlo directamente iba a resultar en el battlebot enemigo siendo empujado, o en el mejor de los casos podría detener su sistema de ataque, dada a la alta cantidad de potencia necesaria para detener el giro del bowl.
@@ -38,10 +40,40 @@ Además, cabe decir que la forma circular o media esférica conseguida también 
 <Diagrama general de funcionamiento. Se sugiere un esquema de sistemas, completo.>
 
 ###  Paso a Paso
-Comenzamos por el tren de movimiento, usando yellow motores para mover las ruedas
-![ ](/multimedia/rueda.jpeg)
-Luego con ello 
 
+#### Materiales:
+
+- 1 Arduino Nano
+- 1 bowl de acero inoxidable
+- 1 rueda pivote
+- 2 motores reductores con ruedas
+- 1 Puente H BTS7960
+- 1 Puente H dual L298n
+- 2 Baterías Li-Po de 7.4V
+- 1 Ventilador de 3x3cm
+- 3 Ruedas de 20mm
+
+- Tuercas y pernos de 3mm
+- Cables para Arduino
+- Placa MDF de 3mm (opcional 6mm)
+- Soldadura para electrónica
+- Termoretráctil
+
+ #### Herramientas:
+- Alicates
+- Destornilladores
+- Pistola de calor o encendedor
+- Cautín
+- Dremel
+- Impresora 3D
+- Cortadora Lasér
+
+#### Opcionales:
+- Alarma para Li-Po
+- Cargador de Li-Po
+
+Para empezar el arduino va conectado a dos puentes H ;el primero llamado BTS7960 43A,tiene la peculiaridad de soportar 43 amperes de corriente continua lo que fue ideal para nuestro gran motor DC el cual con los constantes golpes tenia que ejercer una gran fuerza para no detenerse para lo cual consumia mucho amperaje;tuvimos cuidado de elegir el puente H correcto ya que si este o soportaba podría quemarse y con el todo el circuito relacionado a ese motor, aún así por precaución lo ubicamos sobre una carcasa hecha en la impresora 3D que contenía un ventilador conectado directamente a una  Lipo ,dicho puente tenía dos entradas conectadas a la bateria y dos salidas conectadas 
+![ ](/multimedia/rueda.jpeg)
 
 ### Sobre la app
 
