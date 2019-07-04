@@ -56,7 +56,7 @@ void setup() {
   configurarMotoresMovimiento();
   configurarArma();
   Serial.begin(9600);
-  SerialBT.begin(38400);
+  SerialBT.begin(9600);
 
   Motor weapon = {PIN_ARMA_PWML, 0, 0, 2};
   Motor motorA = {PIN_MOT_AEN, 0, 0, 2};
@@ -100,14 +100,15 @@ void check_vel(Motor motor) {
 
 void leerSerialBT() {
   SerialBT.listen();
-  if (SerialBT.available() >= 6) {
+  int rcv_bytes = SerialBT.available();
+  //Serial.println("" + String(rcv_bytes));
+  if (rcv_bytes == 6) {
     //while (!SerialBT.available());
     sizex = sizeof(struct Message);
     ptr = (char *)&state;
     for (count = 0; count < sizex; count++) {
       *(ptr + count) = SerialBT.read();
     }
-    delay(500);
     Serial.println(state.motorSpeedA);
     Serial.println(state.motorSpeedB);
     Serial.println(state.weaponSpeed);

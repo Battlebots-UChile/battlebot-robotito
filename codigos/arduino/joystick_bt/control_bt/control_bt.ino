@@ -26,7 +26,7 @@ struct Message {
 
 void setup() {
   Serial.begin(9600);
-  SerialBT.begin(38400);
+  SerialBT.begin(9600);
   configurarBotones();
 }
 
@@ -124,7 +124,7 @@ void mapAxis() {
 void sendMessage() {
   message.motorSpeedA = motorSpeedA * sentido;
   message.motorSpeedB = motorSpeedB * sentido;
-  //SerialBT.write((const uint8_t *)&message, sizeof(struct Message));
+  SerialBT.write((const uint8_t *)&message, sizeof(struct Message));
   //SerialBT.write((byte*)&dataSend, sizeof(dataSend));
   Serial.println(message.motorSpeedA);
   Serial.println(message.motorSpeedB);
