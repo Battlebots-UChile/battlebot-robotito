@@ -23,8 +23,6 @@ Funciona en base a dos motores DC básicos, uno conectado a cada rueda, y un mot
 
 El modelo es similiar al de un OVNI ya que apostamos que la velocidad evitaría que nos atraparan y haría difícil acercarse sin ser expulsados lejos debido a la aceleración además el material elegido es un acero que funciona como acorazado lo que nos brinda resistencia.
 
-### [Daños tipo]()
-
 ### Estrategia utilizada
 Elegimos este diseño como un modo de unir defensa y ataque. Según nuestra hipótesis la velocidad del objeto iba a ser tanta que cualquier intento por detenerlo o atacarlo directamente iba a resultar en el battlebot enemigo siendo empujado, o en el mejor de los casos podría detener su sistema de ataque, dada a la alta cantidad de potencia necesaria para detener el giro del bowl.
 
