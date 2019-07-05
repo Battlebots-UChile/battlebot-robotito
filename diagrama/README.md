@@ -1,3 +1,4 @@
 ﻿# Diagrama electromecánico
 
-![diagrama_bt](/diagrama/diagrama_bt.jpg)
+![diag_bt](/diagrama/breadboard.jpg)
+![sch_bt](/diagrama/schematic.jpg)
