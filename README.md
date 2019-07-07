@@ -2,7 +2,7 @@
 # Robotito
 Robotito es un battlebot realizado en el taller de proyecto "Contruye tu battlebot", el cuál combina conocimientos de electrónica, mecánica y programación, bajo un acorazado de metal giratorio.
 ### ![Desde arriba](/multimedia/desdearriba.png)
-### ![Desde el lado](/multimedia/desdeallado.png)
+### ![Desde el lado](/multimedia/desdeellado.png)
 ### ![Exterior](/multimedia/robotito2.jpeg)
 
 
