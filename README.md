@@ -84,5 +84,20 @@ Para empezar el arduino va conectado a dos puentes H; el primero llamado BTS7960
 
 ![Tabla Explicativa](/multimedia/tabla_botones.png)
 
+### Problema - Solución
+1- el primer conflicto fueron las conexiones las que se soltaban constantemente lo que provocaba problemas de cortos al tratar de provar el funcionamiento de los mecanismos, en específico del motor bélico que dado a la gran cantidad de amperaje eran mucho mas notorios los chispazos, para esto una vez decicidida la mejor distribución soldamos las conexiones.
+
+2- el motor tendía a rodar ligeramente sobre si mismo por lo que toda la fuerza de rotación no se centraba en el bool, para ello se le creo una pieza en la impresora 3D que se apernaba a la base manteniendlo quieto.
+
+3-La gran cantidad de amperaje quemo nuestro puente H inicial el VNH2SP30 por lo que lo reemplazamos por uno que aguantara 43 amperes de corriente continua
+
+### Proyecciones a futuro
+Dado al satisfactorio resultado de la competencia, cuyos video se puede ver en (https://drive.google.com/drive/folders/1BpDF191vPP6yp6vsLNgYQf0TWKebsp2z) nuestras modificaciones son meramente opcionales y de ser quisquillosos.
+La primera es cambiar el metodo de manejo, es decir, en vez de usar la App pensamos en cambiarlo para utilizar un joystick lo que obviamente implicaría cambiar los códigos los que serán agregados una vez hecha la modificación.
+#### ![Joystick con arduino](/multimedia/arduino-joystick.png)
+
+La otra modificación es agregar un especie de cinturon al casco con 3 protuberancias ubicadas en la parte inferior del mismo, la idea surgió de la observación en batalla ,nos percatamos que casi todos los golpes son efectuados en la parte inferior del acorazado por lo tanto pensamos agregar esta estructura que pasará debajo de los robots(pensado en los modelos con los que ya peleamos) y los levatará con la velocidad del giro. Obviamente una vez lista la estructura se subirán los planos correspondientes.
+
+
 ## Licencia
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Licencia Creative Commons Atribución-NoComercial 4.0 Internacional</a>.
