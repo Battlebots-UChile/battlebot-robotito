@@ -1,11 +1,10 @@
 ﻿
 # Robotito
 Robotito es un battlebot realizado en el taller de proyecto "Contruye tu battlebot", el cuál combina conocimientos de electrónica, mecánica y programación, bajo un acorazado de metal giratorio.
+<img src="robotito 1.JPG" width="400" height="300">
+<img src="robotito 2.JPG" width="300" height="400">
 
-### ![ Piso inferior](/multimedia/robotito2.jpeg)
-### ![Piso superior](/)
-
-### ![Exterior](/multimedia/robotito1.jpeg)
+### ![Exterior](/multimedia/robotito2.jpeg)
 
 
 ## Integrantes
@@ -19,16 +18,17 @@ Robotito es un battlebot realizado en el taller de proyecto "Contruye tu battleb
 
 Robotito es un robot, pero no cualquier tipo de robot, NOOO... es un BATTLEBOT (por si no quedo claro en los títulos), controlado mediante una aplicación celular (App-Inventor), cuyo objetivo en la vida es detener todos los golpes que intenten destruirlo.
 
-Funciona en base a dos motores DC básicos, uno conectado a cada rueda, y un motor DC de 2500 rpm, conectado a un bowl de cocina, a través de una pieza impresa en 3D. Cuenta con dos puentes H, uno dual y uno single, y es alimentado por dos baterias LiPo.
+Funciona en base a dos motores DC básicos, uno conectado a cada rueda, y un motor DC de 2500 rpm conectado a un bowl de cocina, a través de una pieza impresa en 3D. Cuenta con dos puentes H, uno dual y uno single, y es alimentado por dos baterias LiPo.
 
-El modelo es similiar al de un OVNI ya que apostamos que la velocidad evitaría que nos atraparan y haría difícil acercarse sin ser expulsados lejos debido a la aceleración ,además el material elegido es un acero que funciona como acorazado lo que nos brinda resistencia.
+### Descripción morfológica
+La forma elegida para nuestro robot surgio pensar en cual seria la más óptima defensivamente. Por esto nos inclinamos por utilizar un bowl. Pensamos que, por un lado, su forma semiespefica iba a imposibilitar cualquier intento de agarrarlo. Además, al estar hecho de acero inoxidable claramente iba a ser poco probable que le produjeran daños graves.
+Cabe decir que antes de tomar una desicion realizamos una exhaustiva investigacion en Youtube sobre battlebots alrededor del mundo.
 
 ### Estrategia utilizada
+
 Elegimos este diseño como un modo de unir defensa y ataque. Según nuestra hipótesis la velocidad del objeto iba a ser tanta que cualquier intento por detenerlo o atacarlo directamente iba a resultar en el battlebot enemigo siendo empujado, o en el mejor de los casos podría detener su sistema de ataque, dada a la alta cantidad de potencia necesaria para detener el giro del bowl.
 
 La mejor manera de ganar es evitar golpes laterales; nos referimos a golpes contundentes con un objeto cuyo borde sea masivo, por ejemplo una barra de metal;esto es porque al golpear de manera lateral raya el casco provocando su desgaste y a largo plazo puede provocar abolladuras.
-
-### [Daños tipo]()
 
 #### Defensiva
 El bowl es nuestra principal y evidente, pero no única, defensa. Es de acero inoxidable. Proviene directamente de la cocina de una de las integrantes de nuestro grupo :).
@@ -40,6 +40,9 @@ Las debilidades son mas bien de control, al ser un casco esférico si no se colo
 
 #### Ofensiva
 Como dijimos anteriormente nuestro modelo en sí mismo es una arma, pero aún así pensamos integrar un complemento a la carcasa en la zona mas baja de la misma, dicha estructura hecha de placa MDF consta de un anillo con tres protuberancias que dada a su ubicacion pasarían por debajo de los distintos robots levantandolo usando solo la velocidad y fuerza del motor conectado al casco.
+
+### Descripcion control
+<img src="tabla_botones.png" width="320" height="550">
 
 ### Diagrama funcional
 <Diagrama general de funcionamiento. Se sugiere un esquema de sistemas, completo.>
@@ -80,16 +83,17 @@ Como dijimos anteriormente nuestro modelo en sí mismo es una arma, pero aún as
 Para empezar el arduino va conectado a dos puentes H; el primero llamado BTS7960 43A,tiene la peculiaridad de soportar 43 amperes de corriente continua lo que fue ideal para nuestro gran motor DC el cual con los constantes golpes tenia que ejercer una gran fuerza para no detenerse por lo que consumía mucho amperaje;tuvimos cuidado de elegir el puente H correcto ya que si este no soportaba podría quemarse y con el todo el circuito relacionado a ese motor, aún así por precaución lo ubicamos sobre una carcasa hecha en la impresora 3D que contenía un ventilador conectado directamente a una  Lipo ,dicho puente tenía dos entradas conectadas a la bateria y dos salidas conectadas al motor bélico (así denominados al motor DC desconocido)
 ![ ](/multimedia/rueda.jpeg)
 
-### Sobre la app
-
-![Tabla Explicativa](/multimedia/tabla_botones.png)
-
 ### Problema - Solución
-1- el primer conflicto fueron las conexiones las que se soltaban constantemente lo que provocaba problemas de cortos al tratar de provar el funcionamiento de los mecanismos, en específico del motor bélico que dado a la gran cantidad de amperaje eran mucho mas notorios los chispazos, para esto una vez decicidida la mejor distribución soldamos las conexiones.
+1- Conexiones sueltas.
+Inicialmente teniamos muchas conexiones que estaban agarradas mediante cinta aislante. Pero llegó un punto en el desarrollo del robot donde esto no era eficiente, ya que, debido a la gran cantidad de cables y componentes, estas se soltaban regularmente y entorpecia el avance.
+Solucion: Aprender a soldar. Soldar "todo".
+Aclaracion: "Todo": Todo lo que estaba mas o menos fijo (referido a: Si, este cable va con este hasta el fin de los tiempos) y obviamente funcional.
 
-2- el motor tendía a rodar ligeramente sobre si mismo por lo que toda la fuerza de rotación no se centraba en el bool, para ello se le creo una pieza en la impresora 3D que se apernaba a la base manteniendlo quieto.
+2- el motor tendía a rodar ligeramente sobre si mismo por lo que toda la fuerza de rotación no se centraba en el bowl, para ello se le creo una pieza en la impresora 3D que se apernaba a la base manteniendlo quieto.
 
 3-La gran cantidad de amperaje quemo nuestro puente H inicial el VNH2SP30 por lo que lo reemplazamos por uno que aguantara 43 amperes de corriente continua
+ 4. Cables rozando con el bowl
+5. Baterias que deben ser recargadas
 
 ### Proyecciones a futuro
 Dado al satisfactorio resultado de la competencia, cuyos video se puede ver en (https://drive.google.com/drive/folders/1BpDF191vPP6yp6vsLNgYQf0TWKebsp2z) nuestras modificaciones son meramente opcionales y de ser quisquillosos.
