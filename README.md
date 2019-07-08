@@ -20,30 +20,32 @@ Robotito es un robot, pero no cualquier tipo de robot, NOOO... es un BATTLEBOT (
 Funciona en base a dos motores DC básicos, uno conectado a cada rueda, y un motor DC de 2500 rpm conectado a un bowl de cocina, a través de una pieza impresa en 3D. Cuenta con dos puentes H, uno dual y uno single, y es alimentado por dos baterias LiPo.
 
 ### Descripción morfológica
-<<<<<<< HEAD
-La forma elegida para nuestro robot surgió de pensar en cuál sería la más óptima defensiva. Por esto nos inclinamos por utilizar un bowl. Pensamos que, por un lado, su forma semiesférica iba a imposibilitar cualquier intento de agarrarlo. Además, al estar hecho de acero inoxidable claramente iba a ser poco probable que le produjeran daños graves.
-Cabe decir que antes de tomar una decisión realizamos una exhaustiva investigación en Youtube sobre battlebots alrededor del mundo.
-=======
+
 La forma elegida para nuestro robot surgio pensar en cual seria la más óptima defensivamente. Por esto nos inclinamos por utilizar un bowl. Pensamos que, por un lado, su forma semiesférica iba a imposibilitar cualquier intento de agarrarlo. Además, al estar hecho de acero inoxidable claramente iba a ser poco probable que le produjeran daños graves.
 Cabe decir que antes de tomar una desicion realizamos una exhaustiva investigacion en Youtube sobre battlebots alrededor del mundo.
->>>>>>> 2aeb97ac149b3188507b712b2eb4e41d7c747a89
+
 
 ### Estrategia utilizada
 
-Elegimos este diseño como un modo de unir defensa y ataque. Según nuestra hipótesis la velocidad del objeto iba a ser tanta que cualquier intento por detenerlo o atacarlo directamente iba a resultar en el battlebot enemigo siendo empujado, o en el mejor de los casos podría detener su sistema de ataque, dada a la alta cantidad de potencia necesaria para detener el giro del bowl.
+Elegimos este diseño como un modo de unir defensa y ataque.
+Según nuestra hipótesis la velocidad del casco iba a ser tanta que cualquier intento por detenerlo o atacarlo directamente iba a resultar en el battlebot enemigo siendo empujado, o ,en el mejor de los casos dada a la alta cantidad de potencia necesaria para detener el giro del bowl ,podríamos llegar a quemar el sistema que da vida a su arma.
+Tomando de ejemplo una experiencia del combate, nuestro contricante tenía una barra de metal que giraba; nuestro robotito solo se interponía en el giro de la barra provocando que se detuviera y automaticamente el motor que daba vida a esa barra comenzaba a presentar problemas por el amperaje .
 
-La mejor manera de ganar es evitar golpes laterales; nos referimos a golpes contundentes con un objeto cuyo borde sea masivo, por ejemplo una barra de metal;esto es porque al golpear de manera lateral raya el casco provocando su desgaste y a largo plazo puede provocar abolladuras.
+La mejor manera de ganar es evitar ataques laterales; nos referimos a golpes contundentes con un objeto cuyo borde sea masivo, por ejemplo una barra de metal;esto es porque al golpear de manera lateral raya el casco provocando su desgaste y a largo plazo puede generar abolladuras.
 
 #### Defensiva
-El bowl es nuestra principal y evidente, pero no única, defensa. Es de acero inoxidable. Proviene directamente de la cocina de una de las integrantes de nuestro grupo :).
+El bowl es nuestra principal , pero no única, defensa. Es de acero inoxidable. Proviene directamente de la cocina de una de las integrantes de nuestro grupo :).
 Pero como un pedazo de metal no puede con todo (¿o si?), para detener los posibles ataques a ras de suelo (ya que el bowl deja un par de centímetros al descubierto), nuestro battlebot cuenta con lo que denominamos una "falda", cortada con laser en MDF de 6mm.
 Además, cabe decir que la forma circular o media esférica conseguida también ayuda a que los golpes no lleguen de forma directa.
 
-Nuestro principal recurso es el giro, al atacar, hacerlo de costado si es que el contricante presenta algún tipo de arma  y tratar de interponerse en su movimiento de forma permante; un motor DC convencional no soporta la subida extrema de amperaje debido a la resistencia presentada, lo que provoca que se quemen o bien detengan su función momentáneamente, momento propicio para empujarlos y botarlos de la plataforma.
-Las debilidades son mas bien de control, al ser un casco esférico si no se coloca una distinción no se puede saber donde esta el frente por lo que es dificil maniobrar.
+Nuestro principal recurso es el giro.
+
+Al atacar, hacerlo de costado si es que el contricante presenta algún tipo de arma  y tratar de interponerse en su movimiento de forma permante; un motor DC convencional no soporta la subida extrema de amperaje debido a la resistencia presentada, lo que provoca que se quemen, o bien detengan su función momentáneamente,  propicio para empujarlos y botarlos de la plataforma.
+
+Las debilidades de robotito son mas bien de control, al ser un casco esférico si no se coloca una distinción no se puede saber donde esta el frente por lo que es difícil maniobrar.
 
 #### Ofensiva
-Como dijimos anteriormente nuestro modelo en sí mismo es una arma, pero aún así pensamos integrar un complemento a la carcasa en la zona mas baja de la misma, dicha estructura hecha de placa MDF consta de un anillo con tres protuberancias que dada a su ubicacion pasarían por debajo de los distintos robots levantandolo usando solo la velocidad y fuerza del motor conectado al casco.
+Como dijimos anteriormente nuestro modelo en sí mismo es una arma, pero aún así pensamos integrar un complemento a la carcasa en la zona mas baja de la misma, dicha estructura hecha de placa MDF consta de un anillo con tres protuberancias que dada a su ubicacion pasarían por debajo de los distintos robots levantandolos usando solo la velocidad y fuerza del motor conectado a nuestro casco.
 
 ### Descripcion control
 <img src="tabla_botones.png" width="320" height="550">
@@ -92,7 +94,7 @@ Como dijimos anteriormente nuestro modelo en sí mismo es una arma, pero aún as
 
 1. Imprimir las piezas en 3d, desde [aquí](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/planos/Piezas%203d), y lijar para eliminar imperfecciones.
 2. Cortar las dos bases para el robot, desde [aquí](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/planos/Bases) y quitar imperfecciones.
-3. 
+3.
 
 Para empezar el arduino va conectado a dos puentes H; el primero llamado BTS7960 43A,tiene la peculiaridad de soportar 43 amperes de corriente continua lo que fue ideal para nuestro gran motor DC el cual con los constantes golpes tenia que ejercer una gran fuerza para no detenerse por lo que consumía mucho amperaje;tuvimos cuidado de elegir el puente H correcto ya que si este no soportaba podría quemarse y con el todo el circuito relacionado a ese motor, aún así por precaución lo ubicamos sobre una carcasa hecha en la impresora 3D que contenía un ventilador conectado directamente a una  Lipo ,dicho puente tenía dos entradas conectadas a la bateria y dos salidas conectadas al motor bélico (así denominados al motor DC desconocido)
 ![ ](/multimedia/rueda.jpeg)
