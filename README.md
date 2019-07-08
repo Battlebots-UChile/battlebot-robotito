@@ -32,13 +32,10 @@ La mejor estrategia para ganar con Robotito es:
 - Alejarse del oponente cuando sea posible: Esto es mas que todo para evitar golpes innecesarios que no vayan a ayudar en la estrategia anteriormente mencionada. Es una buena idea alejarse, luego posicionarse y direccionarse hacia el roboenemigo en busca de un empujón que lo lleve al borde la pista, o bien, hacia alguna arma que pueda haber en esta.  
 Una demostración de esto se puede ver [aquí](https://drive.google.com/file/d/1hvNaAUOcBa2c_J4brZBd_sA4WgRW3LiS/view?usp=sharing).
 
-#### Defensiva
+#### Datos defensivos
 El bowl es nuestra principal , pero no única, defensa. Es de acero inoxidable. Proviene directamente de la cocina de una de las integrantes de nuestro grupo :).  
 Pero como un pedazo de metal no puede con todo (¿o si?), para detener los posibles ataques a ras de suelo (ya que el bowl deja un par de centímetros al descubierto), nuestro battlebot cuenta con lo que denominamos una "falda", cortada con laser en MDF de 6mm.
 Además, cabe decir que la forma circular o semiesférica conseguida también ayuda a que los golpes no lleguen de forma directa.
-
-#### Ofensiva
-Como dijimos anteriormente nuestro modelo en sí mismo es una arma, pero aún así 
 
 ### Descripción control
 Robotito tiene su propia app para Android, la cual pueden descargar [aquí](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/codigos/APK).
@@ -78,10 +75,10 @@ Además, cuanta con la posibilidad de activar la reproducción de la canción "M
 - 2 Baterías Li-Po de 7.4V
 - 1 Ventilador de 30x30mm
 - 3 Ruedas de 20mm
-- 4 Separadores hexagonales de 50mm (*)
+- 4 Separadores hexagonales de 50mm (\*)
 - 20 cm de Velcro
-- 2 Conectores hembra HT60 (**)
-- 2 Interruptores (***)
+- 2 Conectores hembra HT60 (\*\*)
+- 2 Interruptores (\*\*\*)
 - 4 Pernos de 2mm
 - 2 Tuercas de 2mm
 - Pernos y tuercas de 3mm
@@ -90,7 +87,7 @@ Además, cuanta con la posibilidad de activar la reproducción de la canción "M
 - Placa MDF de 3mm (opcional 6mm)
 - Soldadura para electrónica
 - Termoretráctil de varias medidas
-- Adhesivo instantáneo, como La Gotita (****)
+- Adhesivo instantáneo, como La Gotita (\*\*\*\*)
 
 ### Herramientas:
 - Alicates varios
@@ -107,61 +104,60 @@ Además, cuanta con la posibilidad de activar la reproducción de la canción "M
 - Alarma para Li-Po
 - Cargador de Li-Po
 
-(*) o alguna combinación que resulte en esa altura.
-(**) o del tipo que corresponda, segun el conector de las LiPos.
-(***) Debe poder soportar la corriente del motor. Nosotros usamos uno que soportaba 15A.
-(****) No nos auspician :(
+(\*) o alguna combinación que resulte en esa altura.
+(\*\*) o del tipo que corresponda, segun el conector de las LiPos.
+(\*\*\*) Debe poder soportar la corriente del motor. Nosotros usamos uno que soportaba 15A.
+(\*\*\*\*) No nos auspician :(
 
 ### Instrucciones
 
-1- Imprimir las piezas en 3d, desde [aquí](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/planos/Piezas%203d), según lo que se indica en su descripción, y lijar para eliminar imperfecciones.
-2- Cortar las dos bases para el robot, desde [aquí](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/planos/Bases) y quitar imperfecciones.
-3- Conectar el Arduino Nano a un PC, y cargar el [codigo](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/codigos/arduino/app_bt).
-4- Descargar el [apk](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/codigos/APK) mediante el celular y ejecutar el instalador.
-5- Probar las componentes individualmente.
-6- Ubicar los [motores DC](https://www.wiltronics.com.au/wp-content/uploads/images/make-and-create/gear-motor-dc-toy-car-wheel-arduino.jpg) con sus respectivas ruedas, utilizando el [agarre 1](https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/planos/Piezas%203d/agarre_yellowmotor1.stl) y el [agarre 2](https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/planos/Piezas%203d/agarre_yellowmotor2.stl) en la base cortada con láser que tiene los orificios para las ruedas, utilizando 4 pernos de 3mm. Esta parte puede ser un poco complicada, pero de ser necesario las piezas 3d se pueden lijar un poco más.   
+1. Imprimir las piezas en 3d, desde [aquí](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/planos/Piezas%203d), según lo que se indica en su descripción, y lijar para eliminar imperfecciones.  
+2. Cortar las dos bases para el robot, desde [aquí](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/planos/Bases) y quitar imperfecciones.
+3. Conectar el Arduino Nano a un PC, y cargar el [codigo](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/codigos/arduino/app_bt).
+4. Descargar el [apk](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/codigos/APK) mediante el celular y ejecutar el instalador.
+5. Probar las componentes individualmente.
+6. Ubicar los [motores DC](https://www.wiltronics.com.au/wp-content/uploads/images/make-and-create/gear-motor-dc-toy-car-wheel-arduino.jpg) con sus respectivas ruedas, utilizando el [agarre 1](https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/planos/Piezas%203d/agarre_yellowmotor1.stl) y el [agarre 2](https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/planos/Piezas%203d/agarre_yellowmotor2.stl) en la base cortada con láser que tiene los orificios para las ruedas, utilizando 4 pernos de 3mm. Esta parte puede ser un poco complicada, pero de ser necesario las piezas 3d se pueden lijar un poco más.   
 Para reforzar, aplicar el adhesivo instantáneo a la unión entre las piezas 3d y la base. 
-7- Solo con pernos(3mm)(con 2 es suficiente), agarrar el ventilador a la [base del ventilador](https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/planos/Piezas%203d/base_ventilador.stl) y posteriormente al puente H BTS7960. Esto último, solo con 2 orificios opuestos utilizando pernos de 2 mm (la tuerca va puesta por el lado de la pieza 3d).
-8- A la estructura anterior, agregarle la [base](https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/planos/Piezas%203d/base_bts7960.stl), utilizando pernos de 3 mm, y ensamblar a la base de las ruedas en la posicion determinada. En este punto se puede notar que los pines del puente H quedan hacia la base. Nosotros creamos una pequeña pieza, que no ha sido detallada , debido a que tuvo fallas y será definitivamente modificada.
-9- Juntar el puente H L298n a su respectiva [base](https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/planos/Piezas%203d/base_l298n.stl). Para esto, primero se deben ubicar las tuercas en los orificios que correspondan. Luego, con pernos de un largo limitado(posiblemente deban cortarlos), agarrar el puente H.
-10- Ensamblar como se detalla en el siguiente esquema, agregando pernos donde corresponda:
+7. Solo con pernos(3mm)(con 2 es suficiente), agarrar el ventilador a la [base del ventilador](https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/planos/Piezas%203d/base_ventilador.stl) y posteriormente al puente H BTS7960. Esto último, solo con 2 orificios opuestos utilizando pernos de 2 mm (la tuerca va puesta por el lado de la pieza 3d).
+8. A la estructura anterior, agregarle la [base](https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/planos/Piezas%203d/base_bts7960.stl), utilizando pernos de 3 mm, y ensamblar a la base de las ruedas en la posicion determinada. En este punto se puede notar que los pines del puente H quedan hacia la base. Nosotros creamos una pequeña pieza, que no ha sido detallada , debido a que tuvo fallas y será definitivamente modificada.
+9. Juntar el puente H L298n a su respectiva [base](https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/planos/Piezas%203d/base_l298n.stl). Para esto, primero se deben ubicar las tuercas en los orificios que correspondan. Luego, con pernos de un largo limitado(posiblemente deban cortarlos), agarrar el puente H.
+10. Ensamblar como se detalla en el siguiente esquema, agregando pernos donde corresponda:
 <img scr="https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/multimedia/esquema_rueda.png" width="500" />
-11- Cortar dos pedazos de velcro, del tamaño de las baterías y, con silicona caliente (y mucho cuidado, nunca se sabe), pegárselos.
-12- Para fijar el Arduino a la base de arriba, también se hizo una pieza, que se evidencia en la siguiente imagen. (algun día estará acá)
-13- Agregar los interruptores en los orificios laterales a las ruedas.
-14- Usar [esto](https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/planos/Piezas%203d/agarre_motorarma.stl) para fijar el motor del arma a la base de arriba. Primero introducir con mucho cuidado los pernos que agarran el motor con la pieza 3d.
-15- Teniendo en cuenta las [conexiones](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/diagrama), ahora se puede comenzar a cablear.  
+11. Cortar dos pedazos de velcro, del tamaño de las baterías y, con silicona caliente (y mucho cuidado, nunca se sabe), pegárselos.
+12. Para fijar el Arduino a la base de arriba, también se hizo una pieza, que se evidencia en la siguiente imagen. (algun día estará acá)
+13. Agregar los interruptores en los orificios laterales a las ruedas.
+14. Usar [esto](https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/planos/Piezas%203d/agarre_motorarma.stl) para fijar el motor del arma a la base de arriba. Primero introducir con mucho cuidado los pernos que agarran el motor con la pieza 3d.
+15. Teniendo en cuenta las [conexiones](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/diagrama), ahora se puede comenzar a cablear.  
 Tener en cuenta: no mantener conectadas las baterías cuando se realice esto. Tener claro cuando los interruptores no estan dejando pasar energía. Todas los GND deben estar conectados. La base de arriba tiene orificios para los conectores HT60 de las baterías. Para las conexiones desde la Lipo al puente H BTS7960 se debe utilizar un cable mas grueso que pueda soportar altos de corriente.
-16- Probar las direcciones de las ruedas, si estas no tienen sentido, probar rotar cables de los motores de las ruedas.
-17- Si existe algun otro problema operacional, consultar sección [Problema-Solución](https://github.com/Battlebots-UChile/battlebot-robotito#problema---solución)
-18- Una vez que todos los motores funcionen segun las indicaciones dadas por la app, se recomienda fijar los cables de arduino con silicona caliente, o en el caso de ser necesario, soldar.
-19- Agregar los separadores en los espacios determinados con pernos y tuercas.
-20- Al bowl realizarle 3 orificios con un taladro a 40mm desde el centro, ser lo mas preciso podible. Esto puede ser muy complicado, por lo que: paciencia.
-21- Fijar la [pieza](https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/planos/Piezas%203d/agarre_motorbowl.stl) al bowl, usando pernos.
+16. Probar las direcciones de las ruedas, si estas no tienen sentido, probar rotar cables de los motores de las ruedas.
+17. Si existe algun otro problema operacional, consultar sección [Problema-Solución](https://github.com/Battlebots-UChile/battlebot-robotito#problema---solución)
+18. Una vez que todos los motores funcionen segun las indicaciones dadas por la app, se recomienda fijar los cables de arduino con silicona caliente, o en el caso de ser necesario, soldar.
+19. Agregar los separadores en los espacios determinados con pernos y tuercas.
+20. Al bowl realizarle 3 orificios con un taladro a 40mm desde el centro, ser lo mas preciso podible. Esto puede ser muy complicado, por lo que: paciencia.
+21. Fijar la [pieza](https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/planos/Piezas%203d/agarre_motorbowl.stl) al bowl, usando pernos.
 
 ## Problema - Solución
-1- Conexiones sueltas  
+1. Conexiones sueltas  
 Inicialmente teniamos muchas conexiones que estaban agarradas mediante cinta aislante. Pero llegó un punto en el desarrollo del robot donde esto no era eficiente, ya que, debido a la gran cantidad de cables y componentes, estas se soltaban regularmente y entorpecia el avance.  
 Solucion: Aprender a soldar. Soldar todo lo que estaba mas o menos fijo (referido a: Si, este cable va con este hasta el fin de los tiempos) y obviamente funcional.
 
-2- No se cargaba el código al Arduino  
+2. No se cargaba el código al Arduino  
 El principal error cuando uno se inicia en el uso de Arduino y módulos BT, es conectar los pines RX y TX con sus opuestos en el otro dispositivo. En el Arduino estos estan designados a los pines 0 y 1, pero cuando estos estan ocupados: no se le puede cargar otro código, ni tampoco interactuar con el Serial.  
 Solución: Designar nuevos pines RX y Tx dentro del Arduino, con la librería SofwareSerial. 
 
-3- Baterías no entregaban la corriente necesaria  
+3. Baterías no entregaban la corriente necesaria  
 Desde un principio, la corriente del motor del arma fue desconocida, por lo que al momento de conectarlo a diversas pilas y baterias, no alcanza la velocidad ni la fuerza que buscabamos.  
 Solucion: Utilizar baterías LiPo. Su principal caracteristica es que puede entregar mucha corriente en poco tiempo, justo lo que necesitabamos.
 
-3- Quemamos un puente H: La gran cantidad de amperaje quemo nuestro puente H inicial el VNH2SP30 por lo que lo reemplazamos por uno que aguantara 43 amperes de corriente continua
+4. Quemamos un puente H: La gran cantidad de amperaje quemo nuestro puente H inicial el VNH2SP30 por lo que lo reemplazamos por uno que aguantara 43 amperes de corriente continua
 
-4- Cables rozando con el bowl
+5. Cables rozando con el bowl
 
-
-6- Falta de espacio  
+6. Falta de espacio  
 Al decidirnos a utilizar un bowl, creimos que el espacio no iba a ser un problema, pero con el cambio de baterías, nos faltaba.  
 Solución: Cambiar un Arduino Uno por un Arduino Nano. Reubicar componentes.
 
-7- Baterias que deben ser recargadas
+7. Baterias que deben ser recargadas
 
 
 ### Proyecciones a futuro
