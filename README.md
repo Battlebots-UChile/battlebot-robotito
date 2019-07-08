@@ -20,10 +20,10 @@ Robotito es un robot, pero no cualquier tipo de robot, NOOO... es un BATTLEBOT (
 Funciona en base a dos motores DC básicos, uno conectado a cada rueda, y un motor DC de 2500 rpm conectado a un bowl de cocina, a través de una pieza impresa en 3D. Cuenta con dos puentes H, uno dual y uno single, y es alimentado por dos baterias LiPo.
 
 ### Descripción morfológica
+La forma elegida para nuestro robot surgió de pensar en cual sería la más óptima defensiva. Por esto nos inclinamos por utilizar un bowl. Pensamos que, por un lado, su forma semiesférica iba a imposibilitar cualquier intento de agarrarlo.
+Además, al estar hecho de acero inoxidable claramente iba a ser poco probable que le produjeran daños graves.
 
-
-
-
+Cabe decir que antes de tomar una decisión realizamos una exhaustiva investigación en Youtube sobre battlebots alrededor del mundo
 ### Estrategia utilizada
 
 Elegimos este diseño como un modo de unir defensa y ataque.
@@ -68,7 +68,7 @@ Como dijimos anteriormente nuestro modelo en sí mismo es una arma, pero aún as
 - 2 Interruptores
 
 - Tuercas y pernos de 3mm
-- Cables 
+- Cables
 - Cables para Arduino
 - Placa MDF de 3mm (opcional 6mm)
 - Soldadura para electrónica
