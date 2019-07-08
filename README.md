@@ -1,6 +1,6 @@
 ﻿
 # Robotito
-Robotito es un battlebot realizado en el taller de proyecto "Contruye tu battlebot", el cuál combina conocimientos de electrónica, mecánica y programación, bajo un acorazado de metal giratorio.
+Robotito fue realizado en el taller de proyecto "Contruye tu battlebot", el cuál combina conocimientos de electrónica, mecánica y programación, bajo un acorazado de metal giratorio.
 ### ![Desde arriba](/multimedia/desdearriba.png)
 ### ![Desde el lado](/multimedia/desdeellado.png)
 ### ![Exterior](/multimedia/robotito2.jpeg)
@@ -20,8 +20,8 @@ Robotito es un robot, pero no cualquier tipo de robot, NOOO... es un BATTLEBOT (
 Funciona en base a dos motores DC básicos, uno conectado a cada rueda, y un motor DC de 2500 rpm conectado a un bowl de cocina, a través de una pieza impresa en 3D. Cuenta con dos puentes H, uno dual y uno single, y es alimentado por dos baterias LiPo.
 
 ### Descripción morfológica
-La forma elegida para nuestro robot surgio pensar en cual seria la más óptima defensivamente. Por esto nos inclinamos por utilizar un bowl. Pensamos que, por un lado, su forma semiespefica iba a imposibilitar cualquier intento de agarrarlo. Además, al estar hecho de acero inoxidable claramente iba a ser poco probable que le produjeran daños graves.
-Cabe decir que antes de tomar una desicion realizamos una exhaustiva investigacion en Youtube sobre battlebots alrededor del mundo.
+La forma elegida para nuestro robot surgió de pensar en cuál sería la más óptima defensiva. Por esto nos inclinamos por utilizar un bowl. Pensamos que, por un lado, su forma semiesférica iba a imposibilitar cualquier intento de agarrarlo. Además, al estar hecho de acero inoxidable claramente iba a ser poco probable que le produjeran daños graves.
+Cabe decir que antes de tomar una decisión realizamos una exhaustiva investigación en Youtube sobre battlebots alrededor del mundo.
 
 ### Estrategia utilizada
 
