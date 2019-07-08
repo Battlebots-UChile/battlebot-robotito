@@ -47,8 +47,27 @@ Las debilidades de robotito son mas bien de control, al ser un casco esférico s
 Como dijimos anteriormente nuestro modelo en sí mismo es una arma, pero aún así pensamos integrar un complemento a la carcasa en la zona mas baja de la misma, dicha estructura hecha de placa MDF consta de un anillo con tres protuberancias que dada a su ubicacion pasarían por debajo de los distintos robots levantandolos usando solo la velocidad y fuerza del motor conectado a nuestro casco.
 
 ### Descripción control
-### ![Control](/multimedia/tabla_botones.png)
+Robotito tiene su propia app para Android, la cual pueden descargar [aquí](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/codigos/APK).
+Al ingresar, se pueden ver 3 secciones:
 
+#### Conexión
+Para conectar la app al modulo BT del robot, basta con:
+1. Prender el robot (nunca está de más cerciorarse)
+2. Activar el Bluetooth del celular
+3. Entrar a la app desde el celular
+4. Presionar "Buscar dispositivos"
+5. Seleccionar el nombre correspondiente al módulo bluetooth (modificable, Google es la luz)
+6. Esperar. Cuando la luz del modulo BT deje de parpadear, sera un indicador de que se ha establecido una conexión.
+
+#### Movimiento
+
+### ![Control](/multimedia/tabla_botones.png =320x550)
+
+#### Arma y emergencia
+En caso de emergencia de debe presionar el boton STOP. ¿Que hace? Manda un señal que detiene el movimiento de los 3 motores que componen a Robotito de manera instantánea (en cuando la señal sea recibida). No afecta el funcionamiento del ventilador, ya que funciona de manera independiente.
+Luego, podemos ver una numeracion de 5 botones, los cuales son las posibles velocidades del arma (se pueden modificar dentro del código .ino, pero no lo sugerimos). En "0" el motor no se mueve. Si se presiona cualquiera que modifique la velocidad actual, el aumento o descenso será paulatino.
+#### Otros
+La app tambien cuenta con un particular sonido al presionar algunas de las teclas. Fuente: desconocida. Además de la posibilidad de activar la reproducción de la cancion Mr. Roboto, presionando el switch de la parte inferior.
 ##  Paso a Paso
 
 ### Materiales:
@@ -98,7 +117,6 @@ Como dijimos anteriormente nuestro modelo en sí mismo es una arma, pero aún as
 
 1. Imprimir las piezas en 3d, desde [aquí](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/planos/Piezas%203d), y lijar para eliminar imperfecciones.
 2. Cortar las dos bases para el robot, desde [aquí](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/planos/Bases) y quitar imperfecciones.
-
 3. Conectar el Arduino Nano a un PC, y cargar el [codigo](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/codigos/arduino/app_bt).
 4. Descargar el [apk](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/codigos/APK) mediante el celular y ejecutar el instalador.
 5. Realizar las [conexiones](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/diagrama).
@@ -123,6 +141,8 @@ Aclaracion: "Todo": Todo lo que estaba mas o menos fijo (referido a: Si, este ca
 6- Espacio.
 
 7- Baterias que deben ser recargadas
+8. Pines RX y TX
+
 ### Proyecciones a futuro
 Dado al satisfactorio resultado de la competencia, cuyos video se puede ver en (https://drive.google.com/drive/folders/1BpDF191vPP6yp6vsLNgYQf0TWKebsp2z) nuestras modificaciones son meramente opcionales y de ser quisquillosos.
 La primera es cambiar el metodo de manejo, es decir, en vez de usar la App pensamos en cambiarlo para utilizar un joystick lo que obviamente implicaría cambiar los códigos los que serán agregados una vez hecha la modificación.
