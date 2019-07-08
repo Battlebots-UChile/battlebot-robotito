@@ -1,7 +1,7 @@
 ﻿
 # Robotito
 Robotito fue realizado en el taller de proyecto "Contruye tu battlebot", el cuál combina conocimientos de electrónica, mecánica y programación, bajo un acorazado de metal giratorio.
-### ![Desde arriba](/multimedia/desdearriba.png)
+<img src="https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/multimedia/desdearriba.png" width="600" width="400"/>
 ### ![Desde el lado](/multimedia/desdeellado.png)
 ### ![Exterior](/multimedia/robotito2.jpeg)
 
@@ -61,8 +61,6 @@ Para conectar la app al modulo BT del robot, basta con:
 
 #### Movimiento
 <img src="https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/multimedia/tabla_botones.png" width="320" width="550"/>
-
-![](/multimedia/tabla_botones.png)
 
 #### Arma y emergencia
 En caso de emergencia de debe presionar el boton STOP. ¿Que hace? Manda un señal que detiene el movimiento de los 3 motores que componen a Robotito de manera instantánea (en cuando la señal sea recibida). No afecta el funcionamiento del ventilador, ya que funciona de manera independiente.
