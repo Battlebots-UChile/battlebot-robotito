@@ -60,7 +60,7 @@ Para conectar la app al modulo BT del robot, basta con:
 6. Esperar. Cuando la luz del modulo BT deje de parpadear, sera un indicador de que se ha establecido una conexión.
 
 #### Movimiento
-
+<img src="tabla_botones.png" alt="320" width="550"/>
 ![](/multimedia/tabla_botones.png =320x550)
 
 #### Arma y emergencia
