@@ -61,7 +61,7 @@ Para conectar la app al modulo BT del robot, basta con:
 
 #### Movimiento
 
-![](./multimedia/tabla_botones.png =320x550)
+![](/multimedia/tabla_botones.png =320x550)
 
 #### Arma y emergencia
 En caso de emergencia de debe presionar el boton STOP. ¿Que hace? Manda un señal que detiene el movimiento de los 3 motores que componen a Robotito de manera instantánea (en cuando la señal sea recibida). No afecta el funcionamiento del ventilador, ya que funciona de manera independiente.
