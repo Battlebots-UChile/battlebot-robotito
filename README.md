@@ -1,10 +1,9 @@
 ﻿
 # Robotito
 Robotito fue realizado en el taller de proyecto "Contruye tu battlebot", el cuál combina conocimientos de electrónica, mecánica y programación, bajo un acorazado de metal giratorio.
-<img src="https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/multimedia/desdearriba.png" width="600" width="400"/>
-### ![Desde el lado](/multimedia/desdeellado.png)
-### ![Exterior](/multimedia/robotito2.jpeg)
-
+<img src="https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/multimedia/desdearriba.png" width="500" />
+<img src="https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/multimedia/desdeellado.png" width="300" />
+<img src="https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/multimedia/robotito2.jpeg" width="300" />
 
 ## Integrantes
 - Leslie Cárdenas - FCFM
