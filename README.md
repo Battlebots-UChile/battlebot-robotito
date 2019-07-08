@@ -58,7 +58,7 @@ Como dijimos anteriormente nuestro modelo en sí mismo es una arma, pero aún as
 - 2 Baterías Li-Po de 7.4V
 - 1 Ventilador de 3x3cm
 - 3 Ruedas de 20mm
-- 4 Separadores hexagonales de 50mm*
+- 4 Separadores hexagonales de 50mm(1)
 - 20 cm de Velcro
 
 - Tuercas y pernos de 3mm
@@ -81,11 +81,12 @@ Como dijimos anteriormente nuestro modelo en sí mismo es una arma, pero aún as
 - Alarma para Li-Po
 - Cargador de Li-Po
 
-* o alguna combinación que resulte en esa altura
+(1) o alguna combinación que resulte en esa altura
+
 #### Instrucciones
 
 1. Imprimir las piezas en 3d, desde [aquí](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/planos/Piezas%203d), y lijar para eliminar imperfecciones.
-2. Cortar las dos bases para el robot (Archivo: [Bases](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/planos/Bases)) y quitar imperfecciones.
+2. Cortar las dos bases para el robot, desde [aquí](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/planos/Bases) y quitar imperfecciones.
 3. 
 
 Para empezar el arduino va conectado a dos puentes H; el primero llamado BTS7960 43A,tiene la peculiaridad de soportar 43 amperes de corriente continua lo que fue ideal para nuestro gran motor DC el cual con los constantes golpes tenia que ejercer una gran fuerza para no detenerse por lo que consumía mucho amperaje;tuvimos cuidado de elegir el puente H correcto ya que si este no soportaba podría quemarse y con el todo el circuito relacionado a ese motor, aún así por precaución lo ubicamos sobre una carcasa hecha en la impresora 3D que contenía un ventilador conectado directamente a una  Lipo ,dicho puente tenía dos entradas conectadas a la bateria y dos salidas conectadas al motor bélico (así denominados al motor DC desconocido)
