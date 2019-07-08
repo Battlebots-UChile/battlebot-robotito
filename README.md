@@ -20,7 +20,7 @@ Robotito es un robot, pero no cualquier tipo de robot, NOOO... es un BATTLEBOT (
 Funciona en base a dos motores DC básicos, uno conectado a cada rueda, y un motor DC de 2500 rpm conectado a un bowl de cocina, a través de una pieza impresa en 3D. Cuenta con dos puentes H, uno dual y uno single, y es alimentado por dos baterias LiPo.
 
 ### Descripción morfológica
-La forma elegida para nuestro robot surgio pensar en cual seria la más óptima defensivamente. Por esto nos inclinamos por utilizar un bowl. Pensamos que, por un lado, su forma semiespefica iba a imposibilitar cualquier intento de agarrarlo. Además, al estar hecho de acero inoxidable claramente iba a ser poco probable que le produjeran daños graves.
+La forma elegida para nuestro robot surgio pensar en cual seria la más óptima defensivamente. Por esto nos inclinamos por utilizar un bowl. Pensamos que, por un lado, su forma semiesférica iba a imposibilitar cualquier intento de agarrarlo. Además, al estar hecho de acero inoxidable claramente iba a ser poco probable que le produjeran daños graves.
 Cabe decir que antes de tomar una desicion realizamos una exhaustiva investigacion en Youtube sobre battlebots alrededor del mundo.
 
 ### Estrategia utilizada
@@ -49,16 +49,17 @@ Como dijimos anteriormente nuestro modelo en sí mismo es una arma, pero aún as
 ###  Paso a Paso
 
 #### Materiales:
-
 - 1 Arduino Nano
-- 1 bowl de acero inoxidable
-- 1 rueda pivote
-- 2 motores reductores con ruedas
+- 1 Bowl de acero inoxidable
+- 1 Rueda loca
+- 2 Motores reductores con ruedas
 - 1 Puente H BTS7960
 - 1 Puente H dual L298n
 - 2 Baterías Li-Po de 7.4V
 - 1 Ventilador de 3x3cm
 - 3 Ruedas de 20mm
+- 4 Separadores hexagonales de 50mm*
+- 20 cm de Velcro
 
 - Tuercas y pernos de 3mm
 - Cables para Arduino
@@ -74,10 +75,18 @@ Como dijimos anteriormente nuestro modelo en sí mismo es una arma, pero aún as
 - Dremel
 - Impresora 3D
 - Cortadora Lasér
+- Limas metálicas
 
 #### Opcionales:
 - Alarma para Li-Po
 - Cargador de Li-Po
+
+* o alguna combinación que resulte en esa altura
+#### Instrucciones
+
+1. Imprimir las piezas en 3d, desde [aquí](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/planos/Piezas%203d), y lijar para eliminar imperfecciones.
+2. Cortar las dos bases para el robot (Archivo: [Bases](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/planos/Bases)) y quitar imperfecciones.
+3. 
 
 Para empezar el arduino va conectado a dos puentes H; el primero llamado BTS7960 43A,tiene la peculiaridad de soportar 43 amperes de corriente continua lo que fue ideal para nuestro gran motor DC el cual con los constantes golpes tenia que ejercer una gran fuerza para no detenerse por lo que consumía mucho amperaje;tuvimos cuidado de elegir el puente H correcto ya que si este no soportaba podría quemarse y con el todo el circuito relacionado a ese motor, aún así por precaución lo ubicamos sobre una carcasa hecha en la impresora 3D que contenía un ventilador conectado directamente a una  Lipo ,dicho puente tenía dos entradas conectadas a la bateria y dos salidas conectadas al motor bélico (así denominados al motor DC desconocido)
 ![ ](/multimedia/rueda.jpeg)
@@ -91,9 +100,13 @@ Aclaracion: "Todo": Todo lo que estaba mas o menos fijo (referido a: Si, este ca
 2- el motor tendía a rodar ligeramente sobre si mismo por lo que toda la fuerza de rotación no se centraba en el bowl, para ello se le creo una pieza en la impresora 3D que se apernaba a la base manteniendlo quieto.
 
 3-La gran cantidad de amperaje quemo nuestro puente H inicial el VNH2SP30 por lo que lo reemplazamos por uno que aguantara 43 amperes de corriente continua
- 4. Cables rozando con el bowl
-5. Baterias que deben ser recargadas
+4- Cables rozando con el bowl
 
+5- Baterias no daban tanta corriente como se necesitaba
+
+6- Espacio.
+
+7- Baterias que deben ser recargadas
 ### Proyecciones a futuro
 Dado al satisfactorio resultado de la competencia, cuyos video se puede ver en (https://drive.google.com/drive/folders/1BpDF191vPP6yp6vsLNgYQf0TWKebsp2z) nuestras modificaciones son meramente opcionales y de ser quisquillosos.
 La primera es cambiar el metodo de manejo, es decir, en vez de usar la App pensamos en cambiarlo para utilizar un joystick lo que obviamente implicaría cambiar los códigos los que serán agregados una vez hecha la modificación.
