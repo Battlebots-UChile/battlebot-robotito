@@ -40,11 +40,8 @@ Las debilidades son mas bien de control, al ser un casco esférico si no se colo
 #### Ofensiva
 Como dijimos anteriormente nuestro modelo en sí mismo es una arma, pero aún así pensamos integrar un complemento a la carcasa en la zona mas baja de la misma, dicha estructura hecha de placa MDF consta de un anillo con tres protuberancias que dada a su ubicacion pasarían por debajo de los distintos robots levantandolo usando solo la velocidad y fuerza del motor conectado al casco.
 
-### Descripcion control
-<img src="tabla_botones.png" width="320" height="550">
-
-### Diagrama funcional
-<Diagrama general de funcionamiento. Se sugiere un esquema de sistemas, completo.>
+### Descripción control
+### ![Control](/multimedia/tabla_botones.png)
 
 ###  Paso a Paso
 
@@ -52,13 +49,14 @@ Como dijimos anteriormente nuestro modelo en sí mismo es una arma, pero aún as
 - 1 Arduino Nano
 - 1 Bowl de acero inoxidable
 - 1 Rueda loca
-- 2 Motores reductores con ruedas
+- 2 Motores DC con ruedas
 - 1 Puente H BTS7960
 - 1 Puente H dual L298n
+- 1 Módulo Bluetooth HC-06
 - 2 Baterías Li-Po de 7.4V
-- 1 Ventilador de 3x3cm
+- 1 Ventilador de 30x30mm
 - 3 Ruedas de 20mm
-- 4 Separadores hexagonales de 50mm(1)
+- 4 Separadores hexagonales de 50mm (*)
 - 20 cm de Velcro
 
 - Tuercas y pernos de 3mm
@@ -68,28 +66,32 @@ Como dijimos anteriormente nuestro modelo en sí mismo es una arma, pero aún as
 - Termoretráctil
 
 #### Herramientas:
-- Alicates
-- Destornilladores
+- Alicates varios
+- Destornilladores varios
 - Pistola de calor o encendedor
 - Cautín
 - Dremel
 - Impresora 3D
 - Cortadora Lasér
 - Limas metálicas
+- Celular Android
 
 #### Opcionales:
 - Alarma para Li-Po
 - Cargador de Li-Po
 
-(1) o alguna combinación que resulte en esa altura
+(*) o alguna combinación que resulte en esa altura
 
 #### Instrucciones
 
 1. Imprimir las piezas en 3d, desde [aquí](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/planos/Piezas%203d), y lijar para eliminar imperfecciones.
 2. Cortar las dos bases para el robot, desde [aquí](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/planos/Bases) y quitar imperfecciones.
-3. 
+3. Conectar el Arduino Nano a un PC, y cargar el [codigo](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/codigos/arduino/app_bt).
+4. Descargar el [apk](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/codigos/APK) mediante el celular y ejecutar el instalador.
+5.Realizar las siguientes conexiones:
 
-Para empezar el arduino va conectado a dos puentes H; el primero llamado BTS7960 43A,tiene la peculiaridad de soportar 43 amperes de corriente continua lo que fue ideal para nuestro gran motor DC el cual con los constantes golpes tenia que ejercer una gran fuerza para no detenerse por lo que consumía mucho amperaje;tuvimos cuidado de elegir el puente H correcto ya que si este no soportaba podría quemarse y con el todo el circuito relacionado a ese motor, aún así por precaución lo ubicamos sobre una carcasa hecha en la impresora 3D que contenía un ventilador conectado directamente a una  Lipo ,dicho puente tenía dos entradas conectadas a la bateria y dos salidas conectadas al motor bélico (así denominados al motor DC desconocido)
+Como sugerencia, probar los componentes individualmente antes de comenzar a ensamblar todo.
+
 ![ ](/multimedia/rueda.jpeg)
 
 ### Problema - Solución
@@ -103,7 +105,7 @@ Aclaracion: "Todo": Todo lo que estaba mas o menos fijo (referido a: Si, este ca
 3-La gran cantidad de amperaje quemo nuestro puente H inicial el VNH2SP30 por lo que lo reemplazamos por uno que aguantara 43 amperes de corriente continua
 4- Cables rozando con el bowl
 
-5- Baterias no daban tanta corriente como se necesitaba
+5- Baterias no daban la corriente necesitada
 
 6- Espacio.
 
