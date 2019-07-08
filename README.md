@@ -21,8 +21,7 @@ Funciona en base a dos motores DC básicos, uno conectado a cada rueda, y un mot
 
 ### Descripción morfológica
 
-La forma elegida para nuestro robot surgio pensar en cual seria la más óptima defensivamente. Por esto nos inclinamos por utilizar un bowl. Pensamos que, por un lado, su forma semiesférica iba a imposibilitar cualquier intento de agarrarlo. Además, al estar hecho de acero inoxidable claramente iba a ser poco probable que le produjeran daños graves.
-Cabe decir que antes de tomar una desicion realizamos una exhaustiva investigacion en Youtube sobre battlebots alrededor del mundo.
+
 
 
 ### Estrategia utilizada
@@ -93,6 +92,13 @@ Como dijimos anteriormente nuestro modelo en sí mismo es una arma, pero aún as
 
 1. Imprimir las piezas en 3d, desde [aquí](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/planos/Piezas%203d), y lijar para eliminar imperfecciones.
 2. Cortar las dos bases para el robot, desde [aquí](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/planos/Bases) y quitar imperfecciones.
+
+3. Conectar el Arduino Nano a un PC, y cargar el [codigo](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/codigos/arduino/app_bt).
+4. Descargar el [apk](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/codigos/APK) mediante el celular y ejecutar el instalador.
+5.Realizar las siguientes conexiones:
+
+Como sugerencia, probar los componentes individualmente antes de comenzar a ensamblar todo.
+
 
 ![ ](/multimedia/rueda.jpeg)
 
