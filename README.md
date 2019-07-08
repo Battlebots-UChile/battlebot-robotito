@@ -20,13 +20,10 @@ Robotito es un robot, pero no cualquier tipo de robot, NOOO... es un BATTLEBOT (
 Funciona en base a dos motores DC básicos, uno conectado a cada rueda, y un motor DC de 2500 rpm conectado a un bowl de cocina, a través de una pieza impresa en 3D. Cuenta con dos puentes H, uno dual y uno single, y es alimentado por dos baterias LiPo.
 
 ### Descripción morfológica
-<<<<<<< HEAD
-La forma elegida para nuestro robot surgió de pensar en cuál sería la más óptima defensiva. Por esto nos inclinamos por utilizar un bowl. Pensamos que, por un lado, su forma semiesférica iba a imposibilitar cualquier intento de agarrarlo. Además, al estar hecho de acero inoxidable claramente iba a ser poco probable que le produjeran daños graves.
-Cabe decir que antes de tomar una decisión realizamos una exhaustiva investigación en Youtube sobre battlebots alrededor del mundo.
-=======
-La forma elegida para nuestro robot surgio pensar en cual seria la más óptima defensivamente. Por esto nos inclinamos por utilizar un bowl. Pensamos que, por un lado, su forma semiesférica iba a imposibilitar cualquier intento de agarrarlo. Además, al estar hecho de acero inoxidable claramente iba a ser poco probable que le produjeran daños graves.
+
+La forma elegida para nuestro robot surgio de pensar en cual sería la más óptima defensivamente. Por esto nos inclinamos por utilizar un bowl. Pensamos que, por un lado, su forma semiesférica iba a imposibilitar cualquier intento de agarrarlo. Además, al estar hecho de acero inoxidable claramente iba a ser poco probable que le produjeran daños graves.
 Cabe decir que antes de tomar una desicion realizamos una exhaustiva investigacion en Youtube sobre battlebots alrededor del mundo.
->>>>>>> 2aeb97ac149b3188507b712b2eb4e41d7c747a89
+
 
 ### Estrategia utilizada
 
@@ -48,9 +45,9 @@ Como dijimos anteriormente nuestro modelo en sí mismo es una arma, pero aún as
 ### Descripción control
 ### ![Control](/multimedia/tabla_botones.png)
 
-###  Paso a Paso
+##  Paso a Paso
 
-#### Materiales:
+### Materiales:
 - 1 Arduino Nano
 - 1 Bowl de acero inoxidable
 - 1 Rueda loca
@@ -70,7 +67,7 @@ Como dijimos anteriormente nuestro modelo en sí mismo es una arma, pero aún as
 - Soldadura para electrónica
 - Termoretráctil
 
-#### Herramientas:
+### Herramientas:
 - Alicates varios
 - Destornilladores varios
 - Pistola de calor o encendedor
@@ -81,13 +78,13 @@ Como dijimos anteriormente nuestro modelo en sí mismo es una arma, pero aún as
 - Limas metálicas
 - Celular Android
 
-#### Opcionales:
+### Opcionales:
 - Alarma para Li-Po
 - Cargador de Li-Po
 
 (*) o alguna combinación que resulte en esa altura
 
-#### Instrucciones
+### Instrucciones
 
 1. Imprimir las piezas en 3d, desde [aquí](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/planos/Piezas%203d), y lijar para eliminar imperfecciones.
 2. Cortar las dos bases para el robot, desde [aquí](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/planos/Bases) y quitar imperfecciones.
@@ -99,7 +96,7 @@ Como sugerencia, probar los componentes individualmente antes de comenzar a ensa
 
 ![ ](/multimedia/rueda.jpeg)
 
-### Problema - Solución
+## Problema - Solución
 1- Conexiones sueltas.
 Inicialmente teniamos muchas conexiones que estaban agarradas mediante cinta aislante. Pero llegó un punto en el desarrollo del robot donde esto no era eficiente, ya que, debido a la gran cantidad de cables y componentes, estas se soltaban regularmente y entorpecia el avance.
 Solucion: Aprender a soldar. Soldar "todo".
