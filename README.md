@@ -121,8 +121,9 @@ Para reforzar, aplicar el adhesivo instantáneo a la unión entre las piezas 3d 
 7. Solo con pernos(3mm)(con 2 es suficiente), agarrar el ventilador a la [base del ventilador](https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/planos/Piezas%203d/base_ventilador.stl) y posteriormente al puente H BTS7960. Esto último, solo con 2 orificios opuestos utilizando pernos de 2 mm (la tuerca va puesta por el lado de la pieza 3d).
 8. A la estructura anterior, agregarle la [base](https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/planos/Piezas%203d/base_bts7960.stl), utilizando pernos de 3 mm, y ensamblar a la base de las ruedas en la posicion determinada. En este punto se puede notar que los pines del puente H quedan hacia la base. Nosotros creamos una pequeña pieza, que no ha sido detallada , debido a que tuvo fallas y será definitivamente modificada.
 9. Juntar el puente H L298n a su respectiva [base](https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/planos/Piezas%203d/base_l298n.stl). Para esto, primero se deben ubicar las tuercas en los orificios que correspondan. Luego, con pernos de un largo limitado(posiblemente deban cortarlos), agarrar el puente H.
-10. Ensamblar como se detalla en el siguiente esquema, agregando pernos donde corresponda:
-<img scr="https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/multimedia/esquema_rueda.png" width="500" />
+10. Ensamblar como se detalla en el siguiente esquema, agregando pernos donde corresponda:  
+<img scr="https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/multimedia/esquema_rueda.png" width="500" />  
+
 11. Cortar dos pedazos de velcro, del tamaño de las baterías y, con silicona caliente (y mucho cuidado, nunca se sabe), pegárselos.
 12. Para fijar el Arduino a la base de arriba, también se hizo una pieza, que se evidencia en la siguiente imagen. (algun día estará acá)
 13. Agregar los interruptores en los orificios laterales a las ruedas.
