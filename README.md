@@ -60,12 +60,15 @@ Como dijimos anteriormente nuestro modelo en sí mismo es una arma, pero aún as
 - 3 Ruedas de 20mm
 - 4 Separadores hexagonales de 50mm (*)
 - 20 cm de Velcro
+- 2 Conectores hembra HT60 (**)
+- 2 Interruptores
 
 - Tuercas y pernos de 3mm
+- Cables 
 - Cables para Arduino
 - Placa MDF de 3mm (opcional 6mm)
 - Soldadura para electrónica
-- Termoretráctil
+- Termoretráctil de varias medidas
 
 ### Herramientas:
 - Alicates varios
@@ -82,7 +85,10 @@ Como dijimos anteriormente nuestro modelo en sí mismo es una arma, pero aún as
 - Alarma para Li-Po
 - Cargador de Li-Po
 
-(*) o alguna combinación que resulte en esa altura
+(*) o alguna combinación que resulte en esa altura.
+(**) o del tipo que corresponda, segun el conector de las LiPos.
+(***) Deben poder soportar la corriente del motor. Nosotros usamos uno que soportaba 15A.
+
 
 ### Instrucciones
 
@@ -90,8 +96,7 @@ Como dijimos anteriormente nuestro modelo en sí mismo es una arma, pero aún as
 2. Cortar las dos bases para el robot, desde [aquí](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/planos/Bases) y quitar imperfecciones.
 3. Conectar el Arduino Nano a un PC, y cargar el [codigo](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/codigos/arduino/app_bt).
 4. Descargar el [apk](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/codigos/APK) mediante el celular y ejecutar el instalador.
-5.Realizar las siguientes conexiones:
-
+5. Realizar las [conexiones](https://github.com/Battlebots-UChile/battlebot-robotito/tree/master/diagrama).
 Como sugerencia, probar los componentes individualmente antes de comenzar a ensamblar todo.
 
 ![ ](/multimedia/rueda.jpeg)
