@@ -60,8 +60,9 @@ Para conectar la app al modulo BT del robot, basta con:
 6. Esperar. Cuando la luz del modulo BT deje de parpadear, sera un indicador de que se ha establecido una conexión.
 
 #### Movimiento
-<img src="tabla_botones.png" alt="320" width="550"/>
-![](/multimedia/tabla_botones.png =320x550)
+<img src="https://github.com/Battlebots-UChile/battlebot-robotito/blob/master/multimedia/tabla_botones.png" width="320" width="550"/>
+
+![](/multimedia/tabla_botones.png)
 
 #### Arma y emergencia
 En caso de emergencia de debe presionar el boton STOP. ¿Que hace? Manda un señal que detiene el movimiento de los 3 motores que componen a Robotito de manera instantánea (en cuando la señal sea recibida). No afecta el funcionamiento del ventilador, ya que funciona de manera independiente.
