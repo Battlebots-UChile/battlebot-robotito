@@ -33,7 +33,7 @@ SoftwareSerial SerialBT(5,6);
 //motor B, derecho
 #define PIN_MOT_B1 13    //IN3
 #define PIN_MOT_B2 12    //IN4
-#define PIN_MOT_BEN 11  //ENB
+#define PIN_MOT_BEN 11   //ENB
 
 //motor arma
 #define PIN_ARMA_PWMR 10
@@ -54,7 +54,7 @@ void setup(){
 void loop() {
   // Chequear Serial
   leerSerial();
-  
+    
   //Detener todo
   detenertodo();
   
@@ -63,7 +63,7 @@ void loop() {
   
   // Mover el arma
   setVelArma();
-  Serial.println(vel_actual);
+  
 }
 
 void setVelArma() {

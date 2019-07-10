@@ -32,9 +32,10 @@ void setup() {
 
 void loop() {
 
-  xAxis = analogRead(A1); // Read Joysticks X-axis
+  //xAxis = analogRead(A1); // Read Joysticks X-axis
   yAxis = analogRead(A0); // Read Joysticks Y-axis
-
+  Serial.println(yAxis);
+  
   //setWeaponSpeed();
 
   //if (digitalRead(PIN_BUTTONSTOP) == LOW) {
@@ -125,7 +126,6 @@ void sendMessage() {
   message.motorSpeedA = motorSpeedA * sentido;
   message.motorSpeedB = motorSpeedB * sentido;
   SerialBT.write((const uint8_t *)&message, sizeof(struct Message));
-  //SerialBT.write((byte*)&dataSend, sizeof(dataSend));
   Serial.println(message.motorSpeedA);
   Serial.println(message.motorSpeedB);
   Serial.println(message.weaponSpeed);
