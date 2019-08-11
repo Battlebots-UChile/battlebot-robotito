@@ -88,6 +88,7 @@ Además, cuenta con la posibilidad de activar la reproducción de la canción "M
 - Soldadura para electrónica
 - Termoretráctil de varias medidas
 - Adhesivo instantáneo, como La Gotita (\*\*\*\*)
+- Pines hembra
 
 ### Herramientas:
 - Alicates varios
@@ -98,6 +99,7 @@ Además, cuenta con la posibilidad de activar la reproducción de la canción "M
 - Impresora 3D
 - Cortadora Láser
 - Limas metálicas
+- Pistola de silicona c/repuestos
 - Celular Android
 
 ### Opcionales:
@@ -150,19 +152,19 @@ Desde un principio, la corriente del motor del arma fue desconocida, por lo que,
 Solución: Utilizar baterías LiPo. Su principal característica es que puede entregar mucha corriente en poco tiempo, justo lo que necesitábamos.
 
 4. Quemamos un puente H  
-La gran cantidad de amperaje quemo nuestro puente H inicial (VNH2SP30), ya que los 30A que suposimos podia soportar, era solo para picks, no de manera continua. Además, se calentaba hasta los 70-100°C.  
-Solución: Lo reemplazamos por el BTS7960, capaz de soportar 40A de manera continua. Este ahora cuenta un disipador bastante grande y un ventilador.
+La gran cantidad de amperaje quemo nuestro puente H inicial (VNH2SP30), ya que los 30A que supusimos podía soportar eran solo para picks, no de manera continua. Por esto, se calentaba hasta los 70-100°C.  
+Solución: Lo reemplazamos por el BTS7960, capaz de soportar 40A de manera continua. Este cuenta un disipador bastante grande y un ventilador.
 
 5. Cables rozando con el bowl  
-Provocaba que el motor del arma necesitara más corriente para funcionar y ocasionaba que las baterias se gastaran más rapido.  
-Solución: Tomar los cables del piso superior con una pieza plastica y pegar otros con silicona caliente.
+Provocaba que el motor del arma necesitara más corriente para funcionar y ocasionaba que las baterías se gastaran más rapido.  
+Solución: Tomar los cables del piso superior con una pieza plástica y pegar otros con silicona caliente.
 
 6. Falta de espacio  
 Al decidirnos a utilizar un bowl, creímos que el espacio no iba a ser un problema, pero con el cambio de baterías, nos faltaba.  
 Solución: Cambiar un Arduino Uno por un Arduino Nano. Reubicar componentes.
 
 ### Proyecciones a futuro
-* Cambiar el método de control: es decir, en vez de usar la App, crearemos un control con botones y un joystick. Esto ya esta en proceso y sus respectivos códigos están actualizados y funcionaless.
+* Cambiar el método de control: es decir, en vez de usar la App, crearemos un control con botones y un joystick. Esto ya está en proceso y sus respectivos códigos están actualizados y funcionales.
 #### ![Joystick con Arduino](/multimedia/arduino-joystick.png)
 * Adición de un arma: Fijaremos a la parte inferior del bowl una estructura hecha de placa MDF, la cual constará de un anillo con tres protuberancias. La idea es que debido a la velocidad y la fuerza con la que gira el bowl, si un roboenemigo se acerca lo suficiente, este sera levantado y dejado caer en reiteradas ocasiones en un periodo corto de tiempo, con la intención de provocar sacudidas que puedan dañar interna y/o externamente a los demás robots. (Planos: Próximamente...)
 

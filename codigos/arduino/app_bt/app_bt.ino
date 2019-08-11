@@ -110,10 +110,10 @@ void aumentar_vel() {
 void moverRobot() {
   //direcciones
   if (state == 'E'){
-    rotarRobot_derecha();
+    rotarRobot_izquierda();
   }
   else if (state == 'Q') {
-    rotarRobot_izquierda();
+    rotarRobot_derecha();
   }
   else if (state == 'S') {
     moverRobot_atras();
@@ -122,10 +122,10 @@ void moverRobot() {
     moverRobot_adelante();
   }
   else if (state == 'A') {
-    moverRobot_izquierda();
+    moverRobot_derecha();
   }
   else if (state == 'D') {
-    moverRobot_derecha();
+    moverRobot_izquierda();
   }
   else if (state == 'P') {
     pararRobot();
