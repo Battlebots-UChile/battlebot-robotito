@@ -32,17 +32,16 @@ void setup() {
 
 void loop() {
 
-  //xAxis = analogRead(A1); // Read Joysticks X-axis
+  xAxis = analogRead(A1); // Read Joysticks X-axis
   yAxis = analogRead(A0); // Read Joysticks Y-axis
-  Serial.println(yAxis);
-  
-  //setWeaponSpeed();
 
-  //if (digitalRead(PIN_BUTTONSTOP) == LOW) {
-  //  message.weaponSpeed = -1;
-  //  sendMessage();
-  //}
-  //else
+  setWeaponSpeed();
+
+  if (digitalRead(PIN_BUTTONSTOP) == LOW) {
+    message.weaponSpeed = -1;
+    sendMessage();
+  }
+
   if (millis() >= TiempoAhora + periodo) {
     TiempoAhora = millis();
     mapAxis();

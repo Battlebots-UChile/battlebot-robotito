@@ -19,7 +19,7 @@ int vel_salto = 2;
 
 //nuevos pines RX y TX
 #include <SoftwareSerial.h>
-SoftwareSerial SerialBT(5,6);
+SoftwareSerial SerialBT(5, 6);
 
 //bluetooth
 #define PIN_BT_TX 5
@@ -41,29 +41,45 @@ SoftwareSerial SerialBT(5,6);
 #define PIN_ARMA_ENR 7
 #define PIN_ARMA_ENL 8
 
-void setup(){
-  
+void setup() {
+
   configurarBluetooth();
   configurarMotoresMovimiento();
   configurarArma();
-  
+
   Serial.begin(9600);
-  SerialBT.begin(9600);
+  //SerialBT.begin(9600);
 }
 
 void loop() {
+  
+  digitalWrite(PIN_MOT_A1, LOW);
+  digitalWrite(PIN_MOT_A2, HIGH);
+  digitalWrite(PIN_MOT_B1, HIGH);
+  digitalWrite(PIN_MOT_B2, LOW);
+  motorA_vel = 255;
+  motorB_vel = 255;
+  analogWrite(PIN_MOT_AEN, motorA_vel);
+  analogWrite(PIN_MOT_BEN, motorB_vel);
+  delay(1000);
+  motorA_vel = 100;
+  motorB_vel = 100;
+  analogWrite(PIN_MOT_AEN, motorA_vel);
+  analogWrite(PIN_MOT_BEN, motorB_vel);
+  delay(1000);
+
   // Chequear Serial
-  leerSerial();
-    
+  //leerSerial();
+
   //Detener todo
-  detenertodo();
-  
+  //detenertodo();
+
   // Mover el robot
-  moverRobot();
-  
+  //moverRobot();
+
   // Mover el arma
-  setVelArma();
-  
+  //setVelArma();
+
 }
 
 void setVelArma() {
@@ -83,7 +99,7 @@ void setVelArma() {
     vel_nueva = 200;
   }
   check_vel();
-  
+
 }
 
 void check_vel() {
@@ -96,20 +112,20 @@ void check_vel() {
 }
 
 void disminuir_vel() {
-    vel_actual -= vel_salto;
-    analogWrite(PIN_ARMA_PWML, vel_actual);
-    delay(25);
+  vel_actual -= vel_salto;
+  analogWrite(PIN_ARMA_PWML, vel_actual);
+  delay(25);
 }
 
 void aumentar_vel() {
-    vel_actual += vel_salto;
-    analogWrite(PIN_ARMA_PWML, vel_actual);
-    delay(25);
+  vel_actual += vel_salto;
+  analogWrite(PIN_ARMA_PWML, vel_actual);
+  delay(25);
 }
 
 void moverRobot() {
   //direcciones
-  if (state == 'E'){
+  if (state == 'E') {
     rotarRobot_izquierda();
   }
   else if (state == 'Q') {
@@ -117,7 +133,7 @@ void moverRobot() {
   }
   else if (state == 'S') {
     moverRobot_atras();
-  }  
+  }
   else if (state == 'W') {
     moverRobot_adelante();
   }
@@ -132,7 +148,7 @@ void moverRobot() {
   }
 }
 
-void detenertodo() { 
+void detenertodo() {
   if (state == 'M') {
     pararRobot();
     digitalWrite(PIN_MOT_AEN, LOW);
@@ -150,89 +166,89 @@ void leerSerial() {
 }
 
 void moverRobot_derecha() {
-    // mover a la derecha
-    
-    motorA_vel = 255;
-    motorB_vel = 150;
-    analogWrite(PIN_MOT_AEN,motorA_vel);
-    analogWrite(PIN_MOT_BEN,motorB_vel);
-    
-    digitalWrite(PIN_MOT_A1, LOW);
-    digitalWrite(PIN_MOT_A2, HIGH);
-    digitalWrite(PIN_MOT_B1, HIGH);
-    digitalWrite(PIN_MOT_B2, LOW);
+  // mover a la derecha
+
+  motorA_vel = 255;
+  motorB_vel = 150;
+  analogWrite(PIN_MOT_AEN, motorA_vel);
+  analogWrite(PIN_MOT_BEN, motorB_vel);
+
+  digitalWrite(PIN_MOT_A1, LOW);
+  digitalWrite(PIN_MOT_A2, HIGH);
+  digitalWrite(PIN_MOT_B1, HIGH);
+  digitalWrite(PIN_MOT_B2, LOW);
 }
 void moverRobot_izquierda() {
-    // mover a la izquierda
+  // mover a la izquierda
 
-    motorA_vel = 150;
-    motorB_vel = 255;
-    analogWrite(PIN_MOT_AEN,motorA_vel);
-    analogWrite(PIN_MOT_BEN,motorB_vel);
-   
-    digitalWrite(PIN_MOT_A1, LOW);
-    digitalWrite(PIN_MOT_A2, HIGH);
-    digitalWrite(PIN_MOT_B1, HIGH);
-    digitalWrite(PIN_MOT_B2, LOW);
+  motorA_vel = 150;
+  motorB_vel = 255;
+  analogWrite(PIN_MOT_AEN, motorA_vel);
+  analogWrite(PIN_MOT_BEN, motorB_vel);
+
+  digitalWrite(PIN_MOT_A1, LOW);
+  digitalWrite(PIN_MOT_A2, HIGH);
+  digitalWrite(PIN_MOT_B1, HIGH);
+  digitalWrite(PIN_MOT_B2, LOW);
 }
 void moverRobot_atras() {
-    // mover hacia atras
-    
-    motorA_vel = 255;
-    motorB_vel = 255;
-    analogWrite(PIN_MOT_AEN,motorA_vel);
-    analogWrite(PIN_MOT_BEN,motorB_vel);
-    
-    digitalWrite(PIN_MOT_A1, HIGH);
-    digitalWrite(PIN_MOT_A2, LOW);
-    
-    digitalWrite(PIN_MOT_B1, LOW);
-    digitalWrite(PIN_MOT_B2, HIGH);
+  // mover hacia atras
+
+  motorA_vel = 255;
+  motorB_vel = 255;
+  analogWrite(PIN_MOT_AEN, motorA_vel);
+  analogWrite(PIN_MOT_BEN, motorB_vel);
+
+  digitalWrite(PIN_MOT_A1, HIGH);
+  digitalWrite(PIN_MOT_A2, LOW);
+
+  digitalWrite(PIN_MOT_B1, LOW);
+  digitalWrite(PIN_MOT_B2, HIGH);
 }
 void moverRobot_adelante() {
-    // mover hacia adelante
-    
-    motorA_vel = 255;
-    motorB_vel = 255;
-    analogWrite(PIN_MOT_AEN,motorA_vel);
-    analogWrite(PIN_MOT_BEN,motorB_vel);
-    
-    digitalWrite(PIN_MOT_A1, LOW);
-    digitalWrite(PIN_MOT_A2, HIGH);
-    digitalWrite(PIN_MOT_B1, HIGH);
-    digitalWrite(PIN_MOT_B2, LOW);
+  // mover hacia adelante
+
+  motorA_vel = 255;
+  motorB_vel = 255;
+  analogWrite(PIN_MOT_AEN, motorA_vel);
+  analogWrite(PIN_MOT_BEN, motorB_vel);
+
+  digitalWrite(PIN_MOT_A1, LOW);
+  digitalWrite(PIN_MOT_A2, HIGH);
+  digitalWrite(PIN_MOT_B1, HIGH);
+  digitalWrite(PIN_MOT_B2, LOW);
 }
 
 void rotarRobot_derecha() {
-    // rotar a la derecha
-    
-    motorA_vel = 200;
-    motorB_vel = 200;
-    analogWrite(PIN_MOT_AEN,motorA_vel);
-    analogWrite(PIN_MOT_BEN,motorB_vel);
-    
-    digitalWrite(PIN_MOT_A1, LOW);
-    digitalWrite(PIN_MOT_A2, HIGH);
-    digitalWrite(PIN_MOT_B1, LOW);
-    digitalWrite(PIN_MOT_B2, HIGH);
+  // rotar a la derecha
+
+  motorA_vel = 200;
+  motorB_vel = 200;
+  analogWrite(PIN_MOT_AEN, motorA_vel);
+  analogWrite(PIN_MOT_BEN, motorB_vel);
+
+  digitalWrite(PIN_MOT_A1, LOW);
+  digitalWrite(PIN_MOT_A2, HIGH);
+  digitalWrite(PIN_MOT_B1, LOW);
+  digitalWrite(PIN_MOT_B2, HIGH);
 }
 
 void rotarRobot_izquierda() {
-    // rotar a la izquierda
-    
-    motorA_vel = 200;
-    motorB_vel = 200;
-    analogWrite(PIN_MOT_AEN,motorA_vel);
-    analogWrite(PIN_MOT_BEN,motorB_vel);
-    
-    digitalWrite(PIN_MOT_A1, HIGH);
-    digitalWrite(PIN_MOT_A2, LOW);
-    digitalWrite(PIN_MOT_B1, HIGH);
-    digitalWrite(PIN_MOT_B2, LOW);
+  // rotar a la izquierda
+
+  motorA_vel = 200;
+  motorB_vel = 200;
+  analogWrite(PIN_MOT_AEN, motorA_vel);
+  analogWrite(PIN_MOT_BEN, motorB_vel);
+
+  digitalWrite(PIN_MOT_A1, HIGH);
+  digitalWrite(PIN_MOT_A2, LOW);
+  digitalWrite(PIN_MOT_B1, HIGH);
+  digitalWrite(PIN_MOT_B2, LOW);
 }
 
 void pararRobot() {
-  
+
   //detener motores
   digitalWrite(PIN_MOT_A1, LOW);
   digitalWrite(PIN_MOT_A2, LOW);
@@ -241,20 +257,20 @@ void pararRobot() {
 }
 
 void configurarBluetooth() {
-  
+
   //Pines Bluetooth
   pinMode(PIN_BT_TX, INPUT);
   pinMode(PIN_BT_RX, INPUT);
 }
 
 void configurarMotoresMovimiento() {
-  
+
   //Pines Motor A
   pinMode(PIN_MOT_A1, OUTPUT);
   pinMode(PIN_MOT_A2, OUTPUT);
   pinMode(PIN_MOT_AEN, OUTPUT);
   digitalWrite(PIN_MOT_AEN, HIGH);
-  
+
   //Pines Motor B
   pinMode(PIN_MOT_B1, OUTPUT);
   pinMode(PIN_MOT_B2, OUTPUT);
@@ -263,15 +279,15 @@ void configurarMotoresMovimiento() {
 }
 
 void configurarArma() {
-  
+
   //Pines Motor Arma
   pinMode(PIN_ARMA_PWMR, OUTPUT);
   pinMode(PIN_ARMA_PWML, OUTPUT);
   pinMode(PIN_ARMA_ENR, OUTPUT);
   pinMode(PIN_ARMA_ENL, OUTPUT);
 
-  digitalWrite(PIN_ARMA_PWMR,LOW);
-  digitalWrite(PIN_ARMA_PWML,LOW);
-  digitalWrite(PIN_ARMA_ENR,HIGH);
-  digitalWrite(PIN_ARMA_ENL,HIGH);
+  digitalWrite(PIN_ARMA_PWMR, LOW);
+  digitalWrite(PIN_ARMA_PWML, LOW);
+  digitalWrite(PIN_ARMA_ENR, HIGH);
+  digitalWrite(PIN_ARMA_ENL, HIGH);
 }

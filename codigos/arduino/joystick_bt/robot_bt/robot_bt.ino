@@ -14,7 +14,6 @@ struct Motor {
   int jumpSpeed;
 };
 
-
 int motorSpeedB = 0;
 int motorSpeedA = 0;
 
@@ -58,14 +57,15 @@ void setup() {
   Serial.begin(9600);
   SerialBT.begin(9600);
 
-  Motor weapon = {PIN_ARMA_PWML, 0, 0, 2};
-  Motor motorA = {PIN_MOT_AEN, 0, 0, 2};
-  Motor motorB = {PIN_MOT_BEN, 0, 0, 2};
+  Motor weapon = {PIN_ARMA_PWML, 0, 0,2};
+  Motor motorA = {PIN_MOT_AEN, 0, 0,4};
+  Motor motorB = {PIN_MOT_BEN, 0, 0,4};
 }
 
 void loop() {
-  // Recibir mensajes
+  //Recibir mensajes
   leerSerialBT();
+
   //Para detener todo
   detenertodo();
 
@@ -80,21 +80,22 @@ void loop() {
     analogWrite(PIN_MOT_AEN, motorA.currentSpeed);   // Send PWM signal to motor A
     analogWrite(PIN_MOT_BEN, motorB.currentSpeed);   // Send PWM signal to motor B
   }
+
+
 }
 
 void setVelArma() {
   weapon.newSpeed = state.weaponSpeed;
-  check_vel(weapon);
-
+  check_vel(&weapon);
 }
 
-void check_vel(Motor motor) {
-  if (motor.currentSpeed > motor.newSpeed) {
-    motor.currentSpeed -= motor.jumpSpeed;
+void check_vel(Motor* motor) {
+  if (motor->currentSpeed > motor->newSpeed) {
+    motor->currentSpeed -= motor ->jumpSpeed;
   }
 
-  else if (motor.currentSpeed < motor.newSpeed) {
-    motor.currentSpeed += motor.jumpSpeed;
+  else if (motor->currentSpeed < motor->newSpeed) {
+    motor->currentSpeed += motor ->jumpSpeed;
   }
 }
 
@@ -109,17 +110,16 @@ void leerSerialBT() {
     for (count = 0; count < sizex; count++) {
       *(ptr + count) = SerialBT.read();
     }
-    Serial.println(state.motorSpeedA);
-    Serial.println(state.motorSpeedB);
-    Serial.println(state.weaponSpeed);
   }
 }
 
 void setVelMov() {
+  motorSpeedA = state.motorSpeedA;
+  motorSpeedB = state.motorSpeedB;
   if (state.motorSpeedA < 0) {
     moverRobot_atras();
-    motorSpeedA = -1 * state.motorSpeedA;
-    motorSpeedB = -1 * state.motorSpeedB;
+    motorSpeedA=-1*motorSpeedA;
+    motorSpeedB=-1*motorSpeedB;
   }
   else if (state.motorSpeedA > 0) {
     moverRobot_adelante();
@@ -127,6 +127,9 @@ void setVelMov() {
   else {
     pararRobot();
   }
+  check_vel(&motorA);
+  check_vel(&motorB);
+
 }
 
 void detenertodo() {
@@ -164,6 +167,7 @@ void configurarBluetooth() {
   pinMode(PIN_BT_TX, INPUT);
   pinMode(PIN_BT_RX, INPUT);
 }
+
 void configurarMotoresMovimiento() {
   //Pines Motor A
   pinMode(PIN_MOT_A1, OUTPUT);
